@@ -33,14 +33,16 @@ Actualmente trabajo en un **ERP modular llamado BarberB**, enfocado en la gesti�
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
 ---
 
 ## Estadísticas de GitHub
 
-![Miguel's GitHub stats](https://github-readme-stats.vercel.app/api?username=miikeboss80&show_icons=true&theme=transparent)
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=miikeboss80&layout=compact&theme=transparent)
+![Estadísticas de Miguel](https://github-readme-stats.vercel.app/api?username=MikeBoss80&show_icons=true&theme=transparent)
+![Lenguajes más usados](https://github-readme-stats.vercel.app/api/top-langs/?username=MikeBoss80&layout=compact&theme=transparent)
+![Racha de commits](https://streak-stats.demolab.com?user=MikeBoss80&theme=transparent)
 
 ---
 
