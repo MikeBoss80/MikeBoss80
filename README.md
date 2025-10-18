@@ -8,7 +8,7 @@ Actualmente trabajo en un **ERP modular llamado BarberB**, enfocado en la gesti�
 ## Sobre mí
 
 - 🎓 Estudiante de desarrollo de software  
-- 💼 En búsqueda de una oportunidad como **desarrollador backend / fullstack junior**  
+- 💼 Formado y capacitado como **desarrollador backend / fullstack junior**  
 - 🧩 Actualmente aprendiendo:
   - Desarrollo con **Django** y **APIs REST**
   - **Microservicios** con **Docker**
@@ -51,8 +51,8 @@ Actualmente trabajo en un **ERP modular llamado BarberB**, enfocado en la gesti�
 | Proyecto | Descripción | Tecnologías |
 |-----------|-------------|--------------|
 | [**BarberB**](https://github.com/miikeboss80/BarberB) | ERP modular para la gestión de barberías y PYMEs. Incluye módulos de citas, inventario, usuarios y reportes. | Django, MySQL, HTML, CSS |
-| [**Portafolio Web**](https://github.com/miikeboss80/portafolio) | Sitio personal que muestra mis proyectos, experiencia y contacto. | HTML, CSS, JS |
-| [**RazorBook**](https://github.com/miikeboss80/RazorBook) | Aplicación móvil para agendar servicios de barbería. | Kotlin, MVVM |
+| [**Portafolio Web**](https://github.com/miikeboss80/Portafolio) | Sitio personal que muestra mis proyectos, experiencia y contacto. | HTML, CSS, JS |
+| [**RazorBook**](https://github.com/miikeboss80/CalculatorC-) | Aplicación móvil para agendar servicios de barbería. | Kotlin, MVVM |
 
 ---
 
