@@ -11,10 +11,8 @@
 
 ## 🧠 Perfil profesional
 
-Backend Engineer con enfoque en datos y automatización de procesos.
-
+Backend Engineer con enfoque en sistemas basados en datos y automatización de procesos empresariales.
 Combino desarrollo backend y analítica para diseñar sistemas que no solo funcionan, sino que generan información útil para la toma de decisiones en entornos empresariales.
-
 Actualmente trabajo en calidad de datos a gran escala y desarrollo soluciones propias orientadas a la digitalización de PYMEs.
 
 
