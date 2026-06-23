@@ -3,47 +3,59 @@
 
 # ¡Hola! Soy Miguel Ángel Bolívar
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2496ED&center=true&vCenter=true&width=650&lines=Backend+Developer+%7C+Data+Analyst;Construyo+software...+y+lo+hago+hablar+con+datos;Python+%7C+Django+%7C+Power+BI+%7C+SQL" alt="Typing SVG" />
+💡 Backend + Data Analyst enfocado en construir software que convierte datos en decisiones
+
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2496ED&center=true&vCenter=true&width=650&lines=Backend+Developer+%7C+Data+Analyst;Construyo+software+que+habla+con+datos;Python+%7C+Django+%7C+Power+BI+%7C+SQL" />
 
 </div>
 
-Desarrollador fullstack con conocimientos y experiencia en **análisis de datos**, combinando ambos mundos: construyo sistemas robustos y los complemento con análisis, dashboards y automatización para generar decisiones reales en PYMEs y procesos empresariales.
+## 🧠 Perfil profesional
 
-🔭 Actualmente trabajo en **INTELCIA S.A.S.** como *Data Quality Analyst*, donde aplico control de calidad, anotación y revisión de datos a gran escala bajo metodología **CRISP-DM**.
-🎓 Este año terminane mi **Tecnólogo en Análisis y Desarrollo de Software** en el SENA (2024–2026).
-🛠️ Como proyecto propio, desarrollo **BarberB**, un ERP modular para la gestión inteligente de PYMEs en Colombia.
+Backend Engineer con enfoque en datos y automatización de procesos.
+
+Combino desarrollo backend y analítica para diseñar sistemas que no solo funcionan, sino que generan información útil para la toma de decisiones en entornos empresariales.
+
+Actualmente trabajo en calidad de datos a gran escala y desarrollo soluciones propias orientadas a la digitalización de PYMEs.
+
+
+## 💼 Experiencia
+
+### 🏢 INTELCIA S.A.S. — Data Quality Analyst
+- Validación y control de calidad de datos en entornos de alto volumen
+- Anotación, revisión y aseguramiento de consistencia de datasets
+- Aplicación de metodología **CRISP-DM** en procesos de análisis
+- Colaboración en pipelines de datos orientados a mejora de calidad
 
 ---
+## 🧭 Perfil técnico
 
-## 🧭 Perfil dual
-
-
-
-| 🛠️ **Backend / Fullstack** | Django, APIs REST, bases de datos relacionales, arquitectura de ERPs, microservicios con Docker |
-| 📊 **Data Analytics** | Python (pandas/numpy), Power BI, control de calidad de datos, modelado y reporting con metodología CRISP-DM |
-| 🧠 **Intereses** | Automatización de procesos, BI aplicado a PYMEs, IA aplicada, startups con propósito |
+| Backend & Arquitectura | APIs REST, Django, diseño de sistemas, bases de datos relacionales, Docker |
+| Data & Analytics | Python (pandas), Power BI, SQL, análisis de datos, dashboards, CRISP-DM |
+| Enfoque | Automatización de procesos, BI para PYMEs, software con impacto real |
 
 ---
 
 ## Sobre mí
 
-- 🎓 Tecnologo en Analisis y desarrollo de software  
-- 💼 Formado y capacitado como **desarrollador backend / fullstack junior**  
-- 🧩 Actualmente aprendiendo:
-  - Desarrollo con **Django** y **APIs REST**
-  - **Microservicios** con **Docker**
-  - Buenas prácticas con **Git** y control de versiones
-  - Diseño y manejo de **ERPs empresariales**
-- 🧠 Interesado en **startups**, **tecnología con propósito** e **innovación aplicada**
+- Tecnólogo en Análisis y Desarrollo de Software (SENA)
+- Experiencia en control de calidad de datos en entornos reales
+- Enfoque actual: backend y diseño de APIs escalables
+- Intereses: startups, automatización, BI y productos digitales con impacto
+- Fortalecimiento en diseño de sistemas basados en datos
+- Mejora continua en prácticas de ingeniería de software (Git, Docker, testing)
 
 ---
 
-## Estadísticas de GitHub
 
-![Estadísticas de Miguel](https://github-readme-stats.vercel.app/api?username=MikeBoss80&show_icons=true&theme=transparent)
-![Lenguajes más usados](https://github-readme-stats.vercel.app/api/top-langs/?username=MikeBoss80&layout=compact&theme=transparent)
-![Racha de commits](https://streak-stats.demolab.com?user=MikeBoss80&theme=transparent)
+## 📊 Estadísticas
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MikeBoss80&layout=compact&theme=transparent)
 
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MikeBoss80&show_icons=true&theme=transparent)
+
+![GitHub Streak](https://streak-stats.demolab.com?user=MikeBoss80&theme=transparent)
+
+> Enfoque principal: Python, SQL y desarrollo backend con Django + análisis de datos
+> 
 ---
 
 
@@ -71,20 +83,19 @@ Desarrollador fullstack con conocimientos y experiencia en **análisis de datos*
 
 **Herramientas**
 
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
-
 
 
 ## 💼 Proyectos destacados
 
 | Proyecto | Descripción | Tecnologías |
 |---|---|---|
-| [**BarberB**](https://github.com/miikeboss80/BarberB) | ERP modular para la gestión de barberías y PYMEs: citas, inventario, usuarios y reportes. | Django, MySQL, HTML, CSS |
-| [**Portafolio Web**](https://github.com/miikeboss80/Portafolio) | Sitio personal con mis proyectos, experiencia y contacto. | HTML, CSS, JS |
-| [**Analisis Toneladas recicladas**](https://github.com/MikeBoss80/prueba_data_analyst_cempre) | App móvil para agendar servicios de barbería. | Kotlin, MVVM |
-| [**Análisis COVID-19**](https://github.com/MikeBoss80/covid_hospitalization_analysis)| Proyecto de portafolio en analítica de datos: limpieza, modelado y dashboard con datos de hospitalización (CDC). | Python, Power BI |
+| [BarberB](https://github.com/miikeboss80/BarberB) | ERP modular para gestión de PYMEs: citas, inventario, usuarios y reportes. | Django, MySQL |
+| [Portafolio Web](https://github.com/miikeboss80/Portafolio) | Sitio personal para mostrar experiencia y proyectos. | HTML, CSS, JS |
+| [Análisis COVID-19](https://github.com/MikeBoss80/covid_hospitalization_analysis) | Análisis de datos de hospitalización con dashboards en Power BI. | Python, Power BI |
+| [Proyecto de datos reciclaje](https://github.com/MikeBoss80/prueba_data_analyst_cempre) | Análisis de datos ambientales para visualización y toma de decisiones. | Python, SQL |
 
 ---
 
@@ -99,8 +110,13 @@ Desarrollador fullstack con conocimientos y experiencia en **análisis de datos*
 
 ## 🤝 Colaboración
 
-Estoy abierto a colaborar en proyectos con impacto real, especialmente en **educación, productividad, BI para PYMEs o transformación digital**. También me interesa participar en **proyectos open source** y trabajos que combinen **backend y analítica de datos**.
-
+Interesado en proyectos relacionados con:
+- Backend para sistemas empresariales
+- Automatización de procesos
+- BI y analítica aplicada a negocio
+- Open source en herramientas de datos o backend
+- Productos digitales con impacto real
+  
 ---
 
 
