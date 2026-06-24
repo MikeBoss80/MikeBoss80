@@ -1,6 +1,7 @@
 <div align="center">
+  <img src="./header.svg" width="100%" alt="header"/>
+</div>
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=180&section=header&text=Miguel%20Angel%20Bolivar&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Fullstack%20Developer%20%7C%20Data%20Analyst&descAlignY=58&descSize=18" width="100%"/>
 
 <br>
 
@@ -10,9 +11,6 @@
 <a href="https://miikeboss80.github.io/portafolio"><img src="https://img.shields.io/badge/Portfolio-2496ED?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
 <img src="https://img.shields.io/badge/Bogotá,_Colombia-555555?style=for-the-badge&logo=googlemaps&logoColor=white"/>
 
-<br><br>
-
-<img src="https://img.shields.io/badge/Disponible_para-Data%20Analyst%20%7C%20Fullstack%20Developer-success?style=for-the-badge"/>
 
 </div>
 
@@ -196,10 +194,7 @@ Interesado en proyectos relacionados con:
 
 ---
 
+
 <div align="center">
-
-<img src="https://komarev.com/ghpvc/?username=MikeBoss80&style=flat-square&color=2496ED" />
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer" width="100%"/>
-
+  <img src="./footer.svg" width="100%" alt="footer"/>
 </div>
