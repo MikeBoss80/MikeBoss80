@@ -1,10 +1,18 @@
 <div align="center">
 
-# ¡Hola! Soy Miguel Ángel Bolívar
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=180&section=header&text=Miguel%20Angel%20Bolivar&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=Fullstack%20Developer%20%7C%20Data%20Analyst&descAlignY=58&descSize=18" width="100%"/>
 
-💡 Backend + Data Analyst enfocado en construir software que convierte datos en decisiones
+<br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&pause=1000&color=2496ED&center=true&vCenter=true&width=650&lines=Backend+Developer+%7C+Data+Analyst;Construyo+software+que+habla+con+datos;Python+%7C+Django+%7C+Power+BI+%7C+SQL" />
+<a href="mailto:miguel.bolivar3000@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+<a href="https://www.linkedin.com/in/miguel-angel-bolivar-621620345"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+<a href="https://github.com/MikeBoss80"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
+<a href="https://miikeboss80.github.io/portafolio"><img src="https://img.shields.io/badge/Portfolio-2496ED?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Bogotá,_Colombia-555555?style=for-the-badge&logo=googlemaps&logoColor=white"/>
+
+<br><br>
+
+<img src="https://img.shields.io/badge/Disponible_para-Data%20Analyst%20%7C%20Fullstack%20Developer-success?style=for-the-badge"/>
 
 </div>
 
@@ -12,67 +20,91 @@
 
 ## 🧠 Perfil profesional
 
-Backend Engineer con enfoque en sistemas basados en datos y automatización de procesos empresariales.
+Desarrollador de software fullstack y analista de datos con experiencia comprobada en el diseño y construcción de aplicaciones web escalables usando **Python (Django, FastAPI)**, **C# (.NET)** y **APIs REST**.
 
-Combino desarrollo backend y analítica para diseñar sistemas que no solo funcionan, sino que generan información útil para la toma de decisiones en entornos empresariales.
+Lideré end-to-end el desarrollo de un **ERP modular para PYMEs** — arquitectura, modelado de datos, autenticación y despliegue — y en entornos **e-commerce de alto tráfico** he aplicado análisis de datos para evaluar métricas clave de modelos de IA (*accuracy*, *conversion rate*, costos operativos), convirtiendo grandes volúmenes de datos en insights que impactan decisiones de negocio.
 
-Actualmente trabajo en calidad de datos a gran escala y desarrollo soluciones propias orientadas a la digitalización de PYMEs.
+Orientado a soluciones mantenibles, con dominio de **Git**, metodologías ágiles y un enfoque constante en la **optimización basada en datos**.
 
 ---
 
 ## 💼 Experiencia
 
-### 🏢 INTELCIA S.A.S. — Data Quality Analyst
+<table>
+<tr><td width="100%">
 
-Rol enfocado en garantizar la calidad, consistencia y confiabilidad de datos utilizados en procesos analíticos y operativos.
+**📊 Data AI Quality Analyst** · INTELCIA S.A.S
+*Junio 2025 — 2026 · Bogotá, Colombia*
 
-- Validación y control de calidad de datos en entornos de alto volumen  
-- Anotación, revisión y aseguramiento de consistencia de datasets  
-- Aplicación de metodología **CRISP-DM** en procesos de análisis  
-- Colaboración en pipelines de datos orientados a mejora de calidad  
+Validación de datos generados por sistemas de IA en plataformas e-commerce de alto tráfico (**Miravia**, **AliExpress**), procesando miles de interacciones diarias entre sellers y buyers.
 
----
-
-## 🧭 Perfil técnico
-
-| Backend & Arquitectura | Data & Analytics | Enfoque |
-|----------------------|------------------|---------|
-| APIs REST, Django, diseño de sistemas, bases de datos relacionales, Docker | Python (pandas), Power BI, SQL, análisis de datos, dashboards, CRISP-DM | Automatización de procesos, BI para PYMEs, software con impacto real |
-
----
-
-## 👤 Sobre mí
-
-- Tecnólogo en Análisis y Desarrollo de Software (SENA)  
-- Experiencia en control de calidad de datos en entornos reales  
-- Enfoque actual: backend y diseño de APIs escalables  
-- Intereses: startups, automatización, BI y productos digitales con impacto  
-- Fortalecimiento en diseño de sistemas basados en datos  
-- Mejora continua en prácticas de ingeniería de software (Git, Docker, testing)  
-
----
-
-## 📊 Estadísticas
-
-<p align="center">
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=MikeBoss80&layout=compact&theme=transparent)
+<details>
+<summary><b>Ver responsabilidades clave</b></summary>
 <br>
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=MikeBoss80&show_icons=true&theme=transparent)
+- Evaluó métricas clave de modelos de IA (*accuracy*, *conversion rate*, costos operativos), identificando patrones y oportunidades de mejora en modelos de chat y sistemas de recomendación.
+- Desarrolló reportes estructurados y análisis estratégicos que respaldaron decisiones del equipo de producto.
+- Automatizó limpieza y transformación de datos con funciones avanzadas y macros de Excel, reduciendo tiempos operativos.
+- Aplicó metodología **CRISP-DM** en procesos de análisis end-to-end.
+- Monitoreó KPIs mediante dashboards internos para el control de calidad de los sistemas de IA.
+
+**Stack:** Python · Excel Avanzado · Power BI · Power Automate
+
+</details>
+
+</td></tr>
+<tr><td width="100%">
+
+**⚙️ Backend Developer Jr** (Prácticas Profesionales) · Koop Technology
+*Octubre 2025 — Abril 2026*
+
+Desarrollo y mantenimiento de APIs REST en producción con FastAPI, integradas a un frontend en React.
+
+<details>
+<summary><b>Ver responsabilidades clave</b></summary>
 <br>
 
-![GitHub Streak](https://streak-stats.demolab.com?user=MikeBoss80&theme=transparent)
+- Implementó lógica de negocio, validaciones robustas y endpoints escalables orientados a producción.
+- Diseñó y optimizó consultas SQL y modelado relacional, aplicando ORMs para eficiencia y mantenibilidad.
+- Integró servicios backend con el frontend en React asegurando comunicación confiable vía APIs bien definidas.
+- Participó activamente en pull requests, revisiones de código y ceremonias ágiles.
 
-</p>
+**Stack:** Python · FastAPI · SQL · ORMs · Git/GitHub · React
 
-> 🎯 Enfoque principal: Python, SQL y desarrollo backend con Django + análisis de datos
+</details>
+
+</td></tr>
+<tr><td width="100%">
+
+**🧩 Full Stack Developer** (Freelance) · Proyecto BarberB — Tecnoparque
+*Abril 2024 — Julio 2025*
+
+Diseño e implementación de un ERP modular para barberías y PYMEs, desde la arquitectura hasta el despliegue en producción.
+
+<details>
+<summary><b>Ver responsabilidades clave</b></summary>
+<br>
+
+- Arquitecturó el backend en Django aplicando *clean architecture* y separación de responsabilidades.
+- Implementó autenticación/autorización con flujos personalizados de recuperación de contraseña.
+- Modeló y optimizó la base de datos en MySQL con gestión de roles y permisos para múltiples tipos de usuario.
+- Desarrolló un dashboard administrativo con indicadores en tiempo real mediante AJAX.
+- Lideró decisiones técnicas, documentación y planificación del producto.
+- Desplegó la solución en infraestructura cloud (**GCP**).
+
+**Stack:** Python · Django · MySQL · HTML/CSS · GCP
+
+</details>
+
+</td></tr>
+</table>
 
 ---
 
 ## ⚙️ Stack tecnológico
 
-### 🧩 Data & Analytics
+**Data & Analytics**
+
 ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
@@ -81,67 +113,93 @@ Rol enfocado en garantizar la calidad, consistencia y confiabilidad de datos uti
 ![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
 ![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
 
----
+**Backend & Fullstack**
 
-### ⚙️ Backend & Fullstack
 ![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![CSharp](https://img.shields.io/badge/C%23_/_.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
 ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 
----
+**Herramientas & Cloud**
 
-### 🛠️ Herramientas
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
 ![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
 
 ---
 
-## 💼 Proyectos destacados
+## 📊 GitHub Stats
+
+<div align="center">
+
+<img src="https://github-readme-stats.vercel.app/api?username=MikeBoss80&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" width="49%"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeBoss80&layout=compact&theme=tokyonight&hide_border=true" width="49%"/>
+
+<img src="https://streak-stats.demolab.com?user=MikeBoss80&theme=tokyonight&hide_border=true" width="70%"/>
+
+<img src="https://github-profile-trophy.vercel.app/?username=MikeBoss80&theme=tokyonight&no-frame=true&no-bg=true&row=1&column=6" width="90%"/>
+
+</div>
+
+---
+
+## 🚀 Proyectos destacados
 
 | Proyecto | Descripción | Tecnologías |
-|----------|------------|--------------|
-| [BarberB](https://github.com/miikeboss80/BarberB) | ERP modular para gestión de PYMEs: citas, inventario, usuarios y reportes. | Django, MySQL |
-| [Portafolio Web](https://github.com/miikeboss80/Portafolio) | Sitio personal para mostrar experiencia y proyectos. | HTML, CSS, JS |
-| [Análisis COVID-19](https://github.com/MikeBoss80/covid_hospitalization_analysis) | Análisis de datos de hospitalización con dashboards en Power BI. | Python, Power BI |
-| [Proyecto de datos reciclaje](https://github.com/MikeBoss80/prueba_data_analyst_cempre) | Análisis de datos ambientales para visualización y toma de decisiones. | Python, SQL |
+|---|---|---|
+| [**BarberB**](https://github.com/miikeboss80/BarberB) | ERP modular para PYMEs: citas, inventario, usuarios, reportes y dashboard en tiempo real. | Django, MySQL, GCP |
+| [**Análisis COVID-19**](https://github.com/MikeBoss80/covid_hospitalization_analysis) | Limpieza, análisis y dashboard en Power BI de datos de hospitalización (CDC). | Python, Power BI |
+| [**Análisis de datos de reciclaje**](https://github.com/MikeBoss80/prueba_data_analyst_cempre) | Análisis de datos ambientales para visualización y toma de decisiones. | Python, SQL |
+| [**Portafolio Web**](https://github.com/miikeboss80/Portafolio) | Sitio personal con experiencia, proyectos y contacto. | HTML, CSS, JS |
 
 ---
 
 ## 🎓 Certificaciones
 
-- Power BI + IA — Platzi / Daxus Latam  
-- Excel Analytics con Python  
-- Fundamentos de C#  
-- Desarrollo Backend / Fullstack Junior  
+- 🟢 Excel Analytics con IA y Python — *Platzi (Abr 2026)*
+- 🟢 Business Intelligence: Utilidad y Áreas de Oportunidad — *Platzi (Abr 2026)*
+- 🟢 Power BI + Inteligencia Artificial — *Daxus Latam (Ene 2026)*
+- 🟢 Foundational C# with Microsoft — *freeCodeCamp (Abr 2026)*
+- 🟢 Fundamentos de .NET — *Platzi (Jul 2025)*
+- 🟢 Administrador de Bases de Datos Relacionales — *CarlosSlim (Ago 2024)*
+
+---
+
+## 🗣️ Idiomas & Soft Skills
+
+![Español](https://img.shields.io/badge/Español-Nativo-blue?style=flat-square)
+![Inglés](https://img.shields.io/badge/Inglés-Avanzado-blue?style=flat-square)
+
+![Liderazgo](https://img.shields.io/badge/-Liderazgo%20Técnico-2496ED?style=flat-square)
+![Equipo](https://img.shields.io/badge/-Trabajo%20en%20Equipo-2496ED?style=flat-square)
+![Comunicación](https://img.shields.io/badge/-Comunicación%20Efectiva-2496ED?style=flat-square)
+![Autonomía](https://img.shields.io/badge/-Autonomía%20y%20Gestión-2496ED?style=flat-square)
+![Resultados](https://img.shields.io/badge/-Orientación%20a%20Resultados-2496ED?style=flat-square)
 
 ---
 
 ## 🤝 Colaboración
 
 Interesado en proyectos relacionados con:
-- Backend para sistemas empresariales  
-- Automatización de procesos  
-- BI y analítica aplicada a negocio  
-- Open source en herramientas de datos o backend  
-- Productos digitales con impacto real  
 
----
-
-## 📫 Contacto
-
-📧 **Correo:** [miguel.bolivar3000@gmail.com](mailto:miguel.bolivar3000@gmail.com)  
-💼 **LinkedIn:** [linkedin.com/in/miguel-angel-bolivar-621620345](https://www.linkedin.com/in/miguel-angel-bolivar-621620345)  
-🌐 **Portafolio:** [https://miikeboss80.github.io/portafolio](https://miikeboss80.github.io/portafolio)  
+- Backend para sistemas empresariales
+- Automatización de procesos
+- BI y analítica aplicada a negocio
+- Open source en herramientas de datos o backend
+- Productos digitales con impacto real
 
 ---
 
 <div align="center">
 
-_Este perfil está en constante evolución — gracias por visitar mi trabajo._
+<img src="https://komarev.com/ghpvc/?username=MikeBoss80&style=flat-square&color=2496ED" />
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=12&height=100&section=footer" width="100%"/>
 
 </div>
