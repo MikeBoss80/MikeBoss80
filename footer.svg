@@ -1,0 +1,182 @@
+<svg width="860" height="140" viewBox="0 0 860 140" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1117"/>
+      <stop offset="60%" style="stop-color:#161B27"/>
+      <stop offset="100%" style="stop-color:#1A1F2E"/>
+    </linearGradient>
+    <linearGradient id="acc2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#F97316"/>
+      <stop offset="100%" style="stop-color:#EF4444"/>
+    </linearGradient>
+    <linearGradient id="blu2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#3B82F6"/>
+      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    </linearGradient>
+    <linearGradient id="fl2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0D1117;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#0D1117;stop-opacity:0"/>
+    </linearGradient>
+    <clipPath id="fc">
+      <rect x="0" y="0" width="860" height="140" rx="0"/>
+    </clipPath>
+  </defs>
+  <g clip-path="url(#fc)">
+    <rect width="860" height="140" fill="url(#bg2)"/>
+
+    <!-- Diagonal accents -->
+    <polygon points="0,0 60,0 0,140" fill="#3B82F6" fill-opacity="0.06"/>
+    <polygon points="860,0 800,0 860,140" fill="#F97316" fill-opacity="0.06"/>
+
+    <!-- Top / bottom bars -->
+    <rect x="0" y="0" width="860" height="3" fill="url(#blu2)"/>
+    <rect x="0" y="137" width="860" height="3" fill="url(#acc2)"/>
+
+    <!-- Speed lines LEFT (animate in) -->
+    <line x1="-10" y1="22" x2="0" y2="23" stroke="#3B82F6" stroke-width="0.7" stroke-opacity="0.28">
+      <animate attributeName="x2" values="0;260" dur="1.2s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.28" dur="1.2s" fill="freeze"/>
+    </line>
+    <line x1="-10" y1="46" x2="0" y2="47" stroke="#8B5CF6" stroke-width="0.5" stroke-opacity="0.2">
+      <animate attributeName="x2" values="0;240" dur="1.5s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.2" dur="1.5s" fill="freeze"/>
+    </line>
+    <line x1="-10" y1="70" x2="0" y2="69" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.25">
+      <animate attributeName="x2" values="0;220" dur="1.8s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.25" dur="1.8s" fill="freeze"/>
+    </line>
+    <line x1="-10" y1="95" x2="0" y2="93" stroke="#8B5CF6" stroke-width="0.5" stroke-opacity="0.18">
+      <animate attributeName="x2" values="0;250" dur="2.0s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.18" dur="2.0s" fill="freeze"/>
+    </line>
+    <line x1="-10" y1="118" x2="0" y2="116" stroke="#3B82F6" stroke-width="0.5" stroke-opacity="0.18">
+      <animate attributeName="x2" values="0;230" dur="2.2s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.18" dur="2.2s" fill="freeze"/>
+    </line>
+
+    <!-- Speed lines RIGHT (animate in) -->
+    <line x1="860" y1="22" x2="860" y2="23" stroke="#F97316" stroke-width="0.7" stroke-opacity="0.24">
+      <animate attributeName="x2" values="860;600" dur="1.2s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.24" dur="1.2s" fill="freeze"/>
+    </line>
+    <line x1="860" y1="46" x2="860" y2="47" stroke="#EF4444" stroke-width="0.5" stroke-opacity="0.2">
+      <animate attributeName="x2" values="860;620" dur="1.5s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.2" dur="1.5s" fill="freeze"/>
+    </line>
+    <line x1="860" y1="70" x2="860" y2="69" stroke="#F97316" stroke-width="0.8" stroke-opacity="0.22">
+      <animate attributeName="x2" values="860;610" dur="1.8s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.22" dur="1.8s" fill="freeze"/>
+    </line>
+    <line x1="860" y1="95" x2="860" y2="93" stroke="#EF4444" stroke-width="0.5" stroke-opacity="0.18">
+      <animate attributeName="x2" values="860;590" dur="2.0s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.18" dur="2.0s" fill="freeze"/>
+    </line>
+    <line x1="860" y1="118" x2="860" y2="116" stroke="#F97316" stroke-width="0.5" stroke-opacity="0.18">
+      <animate attributeName="x2" values="860;605" dur="2.2s" fill="freeze"/>
+      <animate attributeName="stroke-opacity" values="0;0.18" dur="2.2s" fill="freeze"/>
+    </line>
+
+    <!-- Diamond LEFT pulsante -->
+    <polygon points="100,70 130,46 160,70 130,94" fill="none" stroke="#3B82F6" stroke-width="0.9" stroke-opacity="0.4"/>
+    <polygon points="115,70 130,58 145,70 130,82" fill="#3B82F6" fill-opacity="0.07"/>
+    <circle cx="130" cy="70" r="3.5" fill="#3B82F6" fill-opacity="0.55">
+      <animate attributeName="r" values="3.5;6.5;3.5" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.55;0.12;0.55" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Diamond RIGHT pulsante -->
+    <polygon points="700,70 730,46 760,70 730,94" fill="none" stroke="#F97316" stroke-width="0.9" stroke-opacity="0.4"/>
+    <polygon points="715,70 730,58 745,70 730,82" fill="#F97316" fill-opacity="0.07"/>
+    <circle cx="730" cy="70" r="3.5" fill="#F97316" fill-opacity="0.55">
+      <animate attributeName="r" values="3.5;6.5;3.5" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="fill-opacity" values="0.55;0.12;0.55" dur="3s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Vertical accent bar pulsante -->
+    <rect x="190" y="16" width="3" height="108" rx="1.5" fill="url(#acc2)">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/>
+    </rect>
+
+    <!-- Subtitle -->
+    <text x="208" y="44"
+      font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif"
+      font-size="11" font-weight="600"
+      fill="rgba(255,255,255,0.32)" letter-spacing="3.5">
+      MIGUEL ANGEL BOLIVAR
+      <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+    </text>
+
+    <!-- Tagline: "Building the" white -->
+    <text x="208" y="78"
+      font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif"
+      font-size="26" font-weight="700" fill="#FFFFFF">
+      Building the
+      <animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/>
+    </text>
+
+    <!-- Tagline: "future." orange -->
+    <text x="390" y="78"
+      font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif"
+      font-size="26" font-weight="700" fill="#F97316">
+      future.
+      <animate attributeName="opacity" values="0;1" dur="1.6s" fill="freeze"/>
+    </text>
+
+    <!-- Badge Fullstack -->
+    <rect x="208" y="90" width="138" height="24" rx="5"
+      fill="#3B82F6" fill-opacity="0.13"
+      stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.45"/>
+    <text x="277" y="106"
+      font-family="'Segoe UI',Arial,sans-serif"
+      font-size="11" font-weight="600"
+      fill="#60A5FA" text-anchor="middle" letter-spacing="0.4">
+      ⚡ Fullstack Dev
+      <animate attributeName="opacity" values="0;1" dur="1.8s" fill="freeze"/>
+    </text>
+
+    <!-- Badge Data Analyst -->
+    <rect x="355" y="90" width="130" height="24" rx="5"
+      fill="#F97316" fill-opacity="0.12"
+      stroke="#F97316" stroke-width="0.8" stroke-opacity="0.45"/>
+    <text x="420" y="106"
+      font-family="'Segoe UI',Arial,sans-serif"
+      font-size="11" font-weight="600"
+      fill="#FB923C" text-anchor="middle" letter-spacing="0.4">
+      📊 Data Analyst
+      <animate attributeName="opacity" values="0;1" dur="2s" fill="freeze"/>
+    </text>
+
+    <!-- Badge Open Source -->
+    <rect x="494" y="90" width="128" height="24" rx="5"
+      fill="#8B5CF6" fill-opacity="0.12"
+      stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.45"/>
+    <text x="558" y="106"
+      font-family="'Segoe UI',Arial,sans-serif"
+      font-size="11" font-weight="600"
+      fill="#A78BFA" text-anchor="middle" letter-spacing="0.4">
+      🚀 Open Source
+      <animate attributeName="opacity" values="0;1" dur="2.2s" fill="freeze"/>
+    </text>
+
+    <!-- Fade overlays -->
+    <rect x="0" y="0" width="170" height="140" fill="url(#fl2)"/>
+    <rect x="690" y="0" width="170" height="140" fill="url(#fl2)" transform="scale(-1,1) translate(-860,0)"/>
+
+    <!-- Dot deco pulsante -->
+    <circle cx="660" cy="118" r="2.5" fill="rgba(255,255,255,0.14)">
+      <animate attributeName="fill-opacity" values="0.14;0.55;0.14" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="674" cy="118" r="2.5" fill="rgba(255,255,255,0.14)">
+      <animate attributeName="fill-opacity" values="0.14;0.55;0.14" dur="2s" begin="0.35s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="688" cy="118" r="2.5" fill="rgba(255,255,255,0.14)">
+      <animate attributeName="fill-opacity" values="0.14;0.55;0.14" dur="2s" begin="0.7s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Scanline animada (barra de luz que recorre el banner) -->
+    <rect x="-200" y="0" width="120" height="140" fill="url(#blu2)" fill-opacity="0.03" rx="0">
+      <animateTransform attributeName="transform" type="translate"
+        values="-200,0;1060,0;1060,0" dur="4s" repeatCount="indefinite" begin="2s"/>
+    </rect>
+  </g>
+</svg>
