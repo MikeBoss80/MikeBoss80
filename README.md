@@ -5,12 +5,13 @@
 
 <br>
 
-<a href="mailto:miguel.bolivar3000@gmail.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-<a href="https://www.linkedin.com/in/miguel-angel-bolivar-621620345"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
-<a href="https://github.com/MikeBoss80"><img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/></a>
-<a href="https://miikeboss80.github.io/portafolio"><img src="https://img.shields.io/badge/Portfolio-2496ED?style=for-the-badge&logo=googlechrome&logoColor=white"/></a>
-<img src="https://img.shields.io/badge/Bogotá,_Colombia-555555?style=for-the-badge&logo=googlemaps&logoColor=white"/>
-
+<p align="center">
+  <a href="https://github.com/MikeBoss80"><img src="assets/social/github.svg" alt="GitHub"/></a>
+  <a href="https://www.linkedin.com/in/miguel-angel-bolivar-621620345"><img src="assets/social/linkedin.svg" alt="LinkedIn"/></a>
+  <a href="https://miikeboss80.github.io/portafolio"><img src="assets/social/portfolio.svg" alt="Portfolio"/></a>
+  <a href="mailto:miguel.bolivar3000@gmail.com"><img src="assets/social/email.svg" alt="Email"/></a>
+  <img src="assets/social/location.svg" alt="Bogotá, Colombia"/>
+</p>
 
 </div>
 
