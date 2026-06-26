@@ -196,5 +196,5 @@ Interesado en proyectos relacionados con:
 
 
 <div align="center">
-  <img src="./footer.svg" width="100%" alt="footer"/>
+  <img src="./foot.svg" width="100%" alt="footer"/>
 </div>
