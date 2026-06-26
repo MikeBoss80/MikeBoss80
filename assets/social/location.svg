@@ -1,0 +1,10 @@
+<svg width="210" height="44" viewBox="0 0 210 44" xmlns="http://www.w3.org/2000/svg">
+<defs>
+<filter id="s" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+<clipPath id="c"><rect x="0.7" y="0.7" width="208.6" height="42.6" rx="13"/></clipPath></defs>
+<rect x="0.7" y="0.7" width="208.6" height="42.6" rx="13" fill="#0B0F1A" stroke="#94A3B8" stroke-opacity="0.35" stroke-width="1.1"/>
+<g clip-path="url(#c)"></g>
+<g transform="translate(16,12)" filter="url(#s)"><g fill="none" stroke="#94A3B8" stroke-width="1.7" stroke-linejoin="round"><path d="M10 19s7-6.3 7-11A7 7 0 0 0 3 8c0 4.7 7 11 7 11z"/><circle cx="10" cy="8" r="2.6"/></g></g>
+<text x="44" y="27.5" font-family="ui-monospace,'SF Mono',Consolas,monospace" font-size="13" font-weight="700" fill="#CBD5E1" letter-spacing="0.3">Bogotá, Colombia</text>
+
+</svg>

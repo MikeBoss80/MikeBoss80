@@ -1,0 +1,84 @@
+<!-- ============================================================
+     CONTACT STRIP — interactivo (para tu portafolio github.io)
+     Copia este bloque dentro de tu HTML. Es autocontenible.
+     ============================================================ -->
+<div class="mb-contact">
+  <a class="chip chip--cyan"   href="https://github.com/MikeBoss80" target="_blank" rel="noopener">
+    <span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="4" cy="4" r="2.4"/><circle cx="4" cy="16" r="2.4"/><circle cx="16" cy="10" r="2.4"/><path d="M4 6.4v7.2"/><path d="M4 10h6a4 4 0 0 0 4-4V8"/></svg></span>
+    <span class="lb">GitHub</span>
+  </a>
+
+  <a class="chip chip--violet" href="https://www.linkedin.com/in/miguel-angel-bolivar-621620345" target="_blank" rel="noopener">
+    <span class="ic"><svg viewBox="0 0 20 20"><rect x="0.6" y="0.6" width="18.8" height="18.8" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><text x="10" y="14.5" text-anchor="middle" font-family="ui-monospace,Consolas,monospace" font-size="11" font-weight="800" fill="currentColor">in</text></svg></span>
+    <span class="lb">LinkedIn</span>
+  </a>
+
+  <a class="chip chip--grad"   href="https://miikeboss80.github.io/portafolio" target="_blank" rel="noopener">
+    <span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="10" cy="10" r="8.4"/><ellipse cx="10" cy="10" rx="3.6" ry="8.4"/><path d="M1.8 7.2h16.4M1.8 12.8h16.4"/></svg></span>
+    <span class="lb">Portfolio</span>
+  </a>
+
+  <a class="chip chip--amber"  href="mailto:miguel.bolivar3000@gmail.com">
+    <span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="0.6" y="2.6" width="18.8" height="14.8" rx="2.6"/><path d="M1.4 4.2L10 11l8.6-6.8"/></svg></span>
+    <span class="lb">Email</span>
+  </a>
+
+  <span class="chip chip--muted" aria-label="Ubicación">
+    <span class="ic"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><path d="M10 19s7-6.3 7-11A7 7 0 0 0 3 8c0 4.7 7 11 7 11z"/><circle cx="10" cy="8" r="2.6"/></svg></span>
+    <span class="lb">Bogotá, Colombia</span>
+  </span>
+</div>
+
+<style>
+.mb-contact{
+  display:flex; flex-wrap:wrap; gap:12px; justify-content:center;
+  padding:18px; font-family:ui-monospace,'SF Mono',Consolas,monospace;
+  background:radial-gradient(120% 160% at 50% 0%,#0B1120 0%,#070B14 100%);
+  border-radius:16px;
+}
+.mb-contact .chip{
+  --acc:#22D3EE;
+  position:relative; display:inline-flex; align-items:center; gap:9px;
+  padding:9px 16px 9px 13px; border-radius:13px;
+  color:#E2E8F0; text-decoration:none; font-size:13px; font-weight:700; letter-spacing:.3px;
+  background:#0E1626; border:1px solid color-mix(in srgb,var(--acc) 45%,transparent);
+  overflow:hidden; cursor:pointer;
+  transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;
+}
+.mb-contact .chip .ic{ color:var(--acc); display:inline-flex; transition:transform .22s ease; }
+.mb-contact .chip .ic svg{ width:18px; height:18px; }
+.mb-contact .chip::after{ /* subrayado que crece en hover */
+  content:""; position:absolute; left:42px; right:14px; bottom:7px; height:2px;
+  background:var(--acc); border-radius:2px; transform:scaleX(0); transform-origin:left;
+  transition:transform .25s ease;
+}
+.mb-contact .chip:hover{
+  transform:translateY(-3px);
+  border-color:var(--acc);
+  background:color-mix(in srgb,var(--acc) 12%,#0E1626);
+  box-shadow:0 8px 22px -8px color-mix(in srgb,var(--acc) 70%,transparent),
+             0 0 0 1px color-mix(in srgb,var(--acc) 30%,transparent) inset;
+}
+.mb-contact .chip:hover .ic{ transform:scale(1.18) rotate(-4deg); }
+.mb-contact .chip:hover::after{ transform:scaleX(1); }
+.mb-contact .chip:focus-visible{ outline:2px solid var(--acc); outline-offset:2px; }
+
+.mb-contact .chip--cyan{   --acc:#22D3EE; }
+.mb-contact .chip--violet{ --acc:#8B5CF6; }
+.mb-contact .chip--amber{  --acc:#FB923C; }
+.mb-contact .chip--grad{ --acc:#67E8F9;
+  border-image:linear-gradient(90deg,#22D3EE,#8B5CF6) 1; }
+.mb-contact .chip--grad:hover{
+  background:linear-gradient(90deg,rgba(34,211,238,.14),rgba(139,92,246,.14)); }
+.mb-contact .chip--muted{
+  --acc:#94A3B8; color:#94A3B8; cursor:default; background:#0B0F1A;
+  border-color:rgba(148,163,184,.3);
+}
+.mb-contact .chip--muted:hover{ transform:none; box-shadow:none; }
+.mb-contact .chip--muted:hover .ic{ transform:none; }
+.mb-contact .chip--muted::after{ display:none; }
+
+@media (prefers-reduced-motion:reduce){
+  .mb-contact .chip,.mb-contact .chip .ic,.mb-contact .chip::after{ transition:none; }
+}
+</style>
