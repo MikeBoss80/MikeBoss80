@@ -1,182 +1,91 @@
-<svg width="860" height="140" viewBox="0 0 860 140" xmlns="http://www.w3.org/2000/svg">
+<svg width="860" height="120" viewBox="0 0 860 120" xmlns="http://www.w3.org/2000/svg" font-family="ui-sans-serif,'Segoe UI','Helvetica Neue',Arial,sans-serif">
   <defs>
-    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0D1117"/>
-      <stop offset="60%" style="stop-color:#161B27"/>
-      <stop offset="100%" style="stop-color:#1A1F2E"/>
+    <linearGradient id="fbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#121A30"/>
+      <stop offset="45%" stop-color="#0B1120"/>
+      <stop offset="100%" stop-color="#070B14"/>
     </linearGradient>
-    <linearGradient id="acc2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#F97316"/>
-      <stop offset="100%" style="stop-color:#EF4444"/>
+    <linearGradient id="fbar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#FB923C"/>
     </linearGradient>
-    <linearGradient id="blu2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#3B82F6"/>
-      <stop offset="100%" style="stop-color:#8B5CF6"/>
+    <linearGradient id="fline" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22D3EE"/>
+      <stop offset="55%" stop-color="#A78BFA"/>
+      <stop offset="100%" stop-color="#FB923C"/>
     </linearGradient>
-    <linearGradient id="fl2" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#0D1117;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#0D1117;stop-opacity:0"/>
-    </linearGradient>
-    <clipPath id="fc">
-      <rect x="0" y="0" width="860" height="140" rx="0"/>
-    </clipPath>
+    <radialGradient id="fglowC" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#22D3EE" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="fglowA" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FB923C" stop-opacity="0.16"/>
+      <stop offset="100%" stop-color="#FB923C" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="fsoft" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="2.2" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <pattern id="fgrid" width="22" height="22" patternUnits="userSpaceOnUse">
+      <path d="M22 0H0V22" fill="none" stroke="#5EEAD4" stroke-opacity="0.05" stroke-width="0.6"/>
+    </pattern>
+    <clipPath id="fframe"><rect width="860" height="120"/></clipPath>
   </defs>
-  <g clip-path="url(#fc)">
-    <rect width="860" height="140" fill="url(#bg2)"/>
 
-    <!-- Diagonal accents -->
-    <polygon points="0,0 60,0 0,140" fill="#3B82F6" fill-opacity="0.06"/>
-    <polygon points="860,0 800,0 860,140" fill="#F97316" fill-opacity="0.06"/>
+  <g clip-path="url(#fframe)">
+    <rect width="860" height="120" fill="url(#fbg)"/>
+    <rect width="860" height="120" fill="url(#fgrid)"/>
+    <ellipse cx="200" cy="60" rx="240" ry="120" fill="url(#fglowC)"/>
+    <ellipse cx="700" cy="60" rx="220" ry="120" fill="url(#fglowA)"/>
 
-    <!-- Top / bottom bars -->
-    <rect x="0" y="0" width="860" height="3" fill="url(#blu2)"/>
-    <rect x="0" y="137" width="860" height="3" fill="url(#acc2)"/>
+    <rect width="860" height="3" fill="url(#fbar)"/>
+    <rect y="117" width="860" height="3" fill="url(#fbar)"/>
 
-    <!-- Speed lines LEFT (animate in) -->
-    <line x1="-10" y1="22" x2="0" y2="23" stroke="#3B82F6" stroke-width="0.7" stroke-opacity="0.28">
-      <animate attributeName="x2" values="0;260" dur="1.2s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.28" dur="1.2s" fill="freeze"/>
-    </line>
-    <line x1="-10" y1="46" x2="0" y2="47" stroke="#8B5CF6" stroke-width="0.5" stroke-opacity="0.2">
-      <animate attributeName="x2" values="0;240" dur="1.5s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.2" dur="1.5s" fill="freeze"/>
-    </line>
-    <line x1="-10" y1="70" x2="0" y2="69" stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.25">
-      <animate attributeName="x2" values="0;220" dur="1.8s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.25" dur="1.8s" fill="freeze"/>
-    </line>
-    <line x1="-10" y1="95" x2="0" y2="93" stroke="#8B5CF6" stroke-width="0.5" stroke-opacity="0.18">
-      <animate attributeName="x2" values="0;250" dur="2.0s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.18" dur="2.0s" fill="freeze"/>
-    </line>
-    <line x1="-10" y1="118" x2="0" y2="116" stroke="#3B82F6" stroke-width="0.5" stroke-opacity="0.18">
-      <animate attributeName="x2" values="0;230" dur="2.2s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.18" dur="2.2s" fill="freeze"/>
-    </line>
-
-    <!-- Speed lines RIGHT (animate in) -->
-    <line x1="860" y1="22" x2="860" y2="23" stroke="#F97316" stroke-width="0.7" stroke-opacity="0.24">
-      <animate attributeName="x2" values="860;600" dur="1.2s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.24" dur="1.2s" fill="freeze"/>
-    </line>
-    <line x1="860" y1="46" x2="860" y2="47" stroke="#EF4444" stroke-width="0.5" stroke-opacity="0.2">
-      <animate attributeName="x2" values="860;620" dur="1.5s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.2" dur="1.5s" fill="freeze"/>
-    </line>
-    <line x1="860" y1="70" x2="860" y2="69" stroke="#F97316" stroke-width="0.8" stroke-opacity="0.22">
-      <animate attributeName="x2" values="860;610" dur="1.8s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.22" dur="1.8s" fill="freeze"/>
-    </line>
-    <line x1="860" y1="95" x2="860" y2="93" stroke="#EF4444" stroke-width="0.5" stroke-opacity="0.18">
-      <animate attributeName="x2" values="860;590" dur="2.0s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.18" dur="2.0s" fill="freeze"/>
-    </line>
-    <line x1="860" y1="118" x2="860" y2="116" stroke="#F97316" stroke-width="0.5" stroke-opacity="0.18">
-      <animate attributeName="x2" values="860;605" dur="2.2s" fill="freeze"/>
-      <animate attributeName="stroke-opacity" values="0;0.18" dur="2.2s" fill="freeze"/>
-    </line>
-
-    <!-- Diamond LEFT pulsante -->
-    <polygon points="100,70 130,46 160,70 130,94" fill="none" stroke="#3B82F6" stroke-width="0.9" stroke-opacity="0.4"/>
-    <polygon points="115,70 130,58 145,70 130,82" fill="#3B82F6" fill-opacity="0.07"/>
-    <circle cx="130" cy="70" r="3.5" fill="#3B82F6" fill-opacity="0.55">
-      <animate attributeName="r" values="3.5;6.5;3.5" dur="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="fill-opacity" values="0.55;0.12;0.55" dur="2.5s" repeatCount="indefinite"/>
+    <!-- ===== Pulse divider (echo of header's data line) ===== -->
+    <path d="M40,32 L120,26 L200,35 L280,22 L360,32 L440,16 L520,32 L600,26 L680,36 L760,22 L820,30"
+      fill="none" stroke="url(#fline)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      pathLength="1" stroke-dasharray="1 1" stroke-dashoffset="1" filter="url(#fsoft)">
+      <animate attributeName="stroke-dashoffset" from="1" to="0" dur="1.6s" begin="0.2s" fill="freeze"/>
+    </path>
+    <circle cx="820" cy="30" r="3.2" fill="#FDBA74" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.3s" begin="1.8s" fill="freeze"/>
+      <animate attributeName="r" values="3.2;6;3.2" dur="2s" begin="1.8s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Diamond RIGHT pulsante -->
-    <polygon points="700,70 730,46 760,70 730,94" fill="none" stroke="#F97316" stroke-width="0.9" stroke-opacity="0.4"/>
-    <polygon points="715,70 730,58 745,70 730,82" fill="#F97316" fill-opacity="0.07"/>
-    <circle cx="730" cy="70" r="3.5" fill="#F97316" fill-opacity="0.55">
-      <animate attributeName="r" values="3.5;6.5;3.5" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="fill-opacity" values="0.55;0.12;0.55" dur="3s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Vertical accent bar pulsante -->
-    <rect x="190" y="16" width="3" height="108" rx="1.5" fill="url(#acc2)">
-      <animate attributeName="opacity" values="1;0.3;1" dur="2.8s" repeatCount="indefinite"/>
+    <!-- ===== Closing line ===== -->
+    <g opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="0.7s" fill="freeze"/>
+      <text x="430" y="62" text-anchor="middle" font-family="ui-monospace,'SF Mono',Consolas,monospace"
+        font-size="14" font-weight="600"><tspan fill="#FB923C">&gt; </tspan><tspan fill="#E2E8F0">thanks for scrolling</tspan><tspan fill="#64748B"> — </tspan><tspan fill="#5EEAD4">let's connect</tspan></text>
+    </g>
+    <rect x="589" y="52" width="8" height="14" fill="#FB923C" opacity="0">
+      <animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="1.5s" fill="freeze"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1s" begin="1.6s" repeatCount="indefinite"/>
     </rect>
 
-    <!-- Subtitle -->
-    <text x="208" y="44"
-      font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif"
-      font-size="11" font-weight="600"
-      fill="rgba(255,255,255,0.32)" letter-spacing="3.5">
-      MIGUEL ANGEL BOLIVAR
-      <animate attributeName="opacity" values="0;1" dur="1s" fill="freeze"/>
+    <!-- ===== Contact endpoints (editable) ===== -->
+    <g opacity="0" font-family="ui-monospace,Consolas,monospace" font-size="11.5" font-weight="700">
+      <animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="1.1s" fill="freeze"/>
+
+      <rect x="221" y="74" width="130" height="24" rx="12" fill="#22D3EE" fill-opacity="0.10"
+        stroke="#22D3EE" stroke-opacity="0.5" stroke-width="0.9"/>
+      <text x="286" y="90" text-anchor="middle" fill="#67E8F9" letter-spacing="0.3">&lt;/&gt; GitHub</text>
+
+      <rect x="365" y="74" width="130" height="24" rx="12" fill="#8B5CF6" fill-opacity="0.12"
+        stroke="#8B5CF6" stroke-opacity="0.5" stroke-width="0.9"/>
+      <text x="430" y="90" text-anchor="middle" fill="#C4B5FD" letter-spacing="0.3">in · LinkedIn</text>
+
+      <rect x="509" y="74" width="130" height="24" rx="12" fill="#FB923C" fill-opacity="0.10"
+        stroke="#FB923C" stroke-opacity="0.5" stroke-width="0.9"/>
+      <text x="574" y="90" text-anchor="middle" fill="#FDBA74" letter-spacing="0.3">✉ Email</text>
+    </g>
+
+    <!-- ===== Copyright ===== -->
+    <text x="430" y="111" text-anchor="middle" font-family="ui-monospace,Consolas,monospace"
+      font-size="10.5" fill="#64748B" opacity="0">
+      © 2025 · Miguel Angel Bolívar · built with code &amp; data
+      <animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="1.4s" fill="freeze"/>
     </text>
-
-    <!-- Tagline: "Building the" white -->
-    <text x="208" y="78"
-      font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif"
-      font-size="26" font-weight="700" fill="#FFFFFF">
-      Building the
-      <animate attributeName="opacity" values="0;1" dur="1.2s" fill="freeze"/>
-    </text>
-
-    <!-- Tagline: "future." orange -->
-    <text x="390" y="78"
-      font-family="'Segoe UI','Helvetica Neue',Arial,sans-serif"
-      font-size="26" font-weight="700" fill="#F97316">
-      future.
-      <animate attributeName="opacity" values="0;1" dur="1.6s" fill="freeze"/>
-    </text>
-
-    <!-- Badge Fullstack -->
-    <rect x="208" y="90" width="138" height="24" rx="5"
-      fill="#3B82F6" fill-opacity="0.13"
-      stroke="#3B82F6" stroke-width="0.8" stroke-opacity="0.45"/>
-    <text x="277" y="106"
-      font-family="'Segoe UI',Arial,sans-serif"
-      font-size="11" font-weight="600"
-      fill="#60A5FA" text-anchor="middle" letter-spacing="0.4">
-      ⚡ Fullstack Dev
-      <animate attributeName="opacity" values="0;1" dur="1.8s" fill="freeze"/>
-    </text>
-
-    <!-- Badge Data Analyst -->
-    <rect x="355" y="90" width="130" height="24" rx="5"
-      fill="#F97316" fill-opacity="0.12"
-      stroke="#F97316" stroke-width="0.8" stroke-opacity="0.45"/>
-    <text x="420" y="106"
-      font-family="'Segoe UI',Arial,sans-serif"
-      font-size="11" font-weight="600"
-      fill="#FB923C" text-anchor="middle" letter-spacing="0.4">
-      📊 Data Analyst
-      <animate attributeName="opacity" values="0;1" dur="2s" fill="freeze"/>
-    </text>
-
-    <!-- Badge Open Source -->
-    <rect x="494" y="90" width="128" height="24" rx="5"
-      fill="#8B5CF6" fill-opacity="0.12"
-      stroke="#8B5CF6" stroke-width="0.8" stroke-opacity="0.45"/>
-    <text x="558" y="106"
-      font-family="'Segoe UI',Arial,sans-serif"
-      font-size="11" font-weight="600"
-      fill="#A78BFA" text-anchor="middle" letter-spacing="0.4">
-      🚀 Open Source
-      <animate attributeName="opacity" values="0;1" dur="2.2s" fill="freeze"/>
-    </text>
-
-    <!-- Fade overlays -->
-    <rect x="0" y="0" width="170" height="140" fill="url(#fl2)"/>
-    <rect x="690" y="0" width="170" height="140" fill="url(#fl2)" transform="scale(-1,1) translate(-860,0)"/>
-
-    <!-- Dot deco pulsante -->
-    <circle cx="660" cy="118" r="2.5" fill="rgba(255,255,255,0.14)">
-      <animate attributeName="fill-opacity" values="0.14;0.55;0.14" dur="2s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="674" cy="118" r="2.5" fill="rgba(255,255,255,0.14)">
-      <animate attributeName="fill-opacity" values="0.14;0.55;0.14" dur="2s" begin="0.35s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="688" cy="118" r="2.5" fill="rgba(255,255,255,0.14)">
-      <animate attributeName="fill-opacity" values="0.14;0.55;0.14" dur="2s" begin="0.7s" repeatCount="indefinite"/>
-    </circle>
-
-    <!-- Scanline animada (barra de luz que recorre el banner) -->
-    <rect x="-200" y="0" width="120" height="140" fill="url(#blu2)" fill-opacity="0.03" rx="0">
-      <animateTransform attributeName="transform" type="translate"
-        values="-200,0;1060,0;1060,0" dur="4s" repeatCount="indefinite" begin="2s"/>
-    </rect>
   </g>
 </svg>
