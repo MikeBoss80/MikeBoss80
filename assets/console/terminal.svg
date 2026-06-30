@@ -1,0 +1,91 @@
+<svg width="700" height="380" viewBox="0 0 700 380" xmlns="http://www.w3.org/2000/svg" font-family="SFMono-Regular, Menlo, Consolas, monospace">
+
+  <!-- Sombra y ventana -->
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="14" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e1e2e"/>
+      <stop offset="100%" stop-color="#161620"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <rect x="10" y="10" width="680" height="360" rx="14" fill="url(#bg)" stroke="#33334a" stroke-width="1"/>
+
+    <!-- Barra de título -->
+    <rect x="10" y="10" width="680" height="38" rx="14" fill="#26263a"/>
+    <rect x="10" y="34" width="680" height="14" fill="#26263a"/>
+    <circle cx="34" cy="29" r="6.5" fill="#ff5f56"/>
+    <circle cx="56" cy="29" r="6.5" fill="#ffbd2e"/>
+    <circle cx="78" cy="29" r="6.5" fill="#27c93f"/>
+    <text x="350" y="34" text-anchor="middle" fill="#9a9ab0" font-size="13">miguel@profile: ~</text>
+  </g>
+
+  <!-- Contenido -->
+  <g font-size="14.5" fill="#d6d6e7">
+
+    <!-- ===== PANTALLA 1: PERFIL ===== -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.02;0.23;0.25" dur="20s" repeatCount="indefinite"/>
+      <text x="32" y="80"><tspan fill="#27c93f">miguel@profile</tspan><tspan fill="#9a9ab0">:~$ </tspan><tspan fill="#fff">whoami</tspan></text>
+      <text x="32" y="108" fill="#8be9fd">Miguel</text>
+      <text x="32" y="132">&gt; AI Operations &amp; Data Quality Analyst @ INTELCIA S.A.S.</text>
+      <text x="32" y="156">&gt; Estudiante de Tecnología en Análisis y Desarrollo de Software (SENA)</text>
+      <text x="32" y="180">&gt; Bogotá, Colombia 🇨🇴</text>
+      <text x="32" y="204" fill="#f1fa8c">&gt; Enfoque: e-commerce (Miravia / AliExpress) + CRISP-DM</text>
+      <text x="32" y="236"><tspan fill="#27c93f">miguel@portfolio</tspan><tspan fill="#9a9ab0">:~$ </tspan><tspan fill="#ffffff">_</tspan>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- ===== PANTALLA 2: EXPERIENCIA ===== -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.27;0.48;0.50" dur="20s" repeatCount="indefinite"/>
+      <text x="32" y="80"><tspan fill="#27c93f">miguel@profile</tspan><tspan fill="#9a9ab0">:~$ </tspan><tspan fill="#fff">cat experiencia.log</tspan></text>
+      <text x="32" y="108" fill="#bd93f9">[2024 - actual] INTELCIA S.A.S.</text>
+      <text x="32" y="128">  AI Operations &amp; Data Quality Analyst</text>
+      <text x="32" y="148" fill="#bd93f9">[Práctica] Koop Technology</text>
+      <text x="32" y="168">  Backend Developer Intern</text>
+      <text x="32" y="188" fill="#bd93f9">[Freelance] BarberB ERP</text>
+      <text x="32" y="208">  Full-stack Development</text>
+      <text x="32" y="236"><tspan fill="#27c93f">miguel@profile</tspan><tspan fill="#9a9ab0">:~$ </tspan><tspan fill="#ffffff">_</tspan>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- ===== PANTALLA 3: ESTUDIOS ===== -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.52;0.73;0.75" dur="20s" repeatCount="indefinite"/>
+      <text x="32" y="80"><tspan fill="#27c93f">miguel@profile</tspan><tspan fill="#9a9ab0">:~$ </tspan><tspan fill="#fff">cat estudios.json</tspan></text>
+      <text x="32" y="108" fill="#f1fa8c">{</text>
+      <text x="56" y="132">"programa": "Tecnólogo en Análisis y Desarrollo de Software",</text>
+      <text x="56" y="156">"institución": "SENA",</text>
+      <text x="56" y="180">"periodo": "2024 - 2026",</text>
+      <text x="56" y="204">"certificaciones": ["CRISP-DM", "Backend", "Data Analytics"]</text>
+      <text x="32" y="228" fill="#f1fa8c">}</text>
+      <text x="32" y="252"><tspan fill="#27c93f">miguel@profile</tspan><tspan fill="#9a9ab0">:~$ </tspan><tspan fill="#ffffff">_</tspan>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+    <!-- ===== PANTALLA 4: HABILIDADES ===== -->
+    <g opacity="0">
+      <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;0.77;0.98;1" dur="20s" repeatCount="indefinite"/>
+      <text x="32" y="80"><tspan fill="#27c93f">miguel@profile</tspan><tspan fill="#9a9ab0">:~$ </tspan><tspan fill="#fff">ls habilidades/</tspan></text>
+      <text x="32" y="112" fill="#8be9fd">Backend</text>
+      <text x="180" y="112" fill="#8be9fd">Data Analytics</text>
+      <text x="32" y="140" fill="#ff79c6">Python · SQL</text>
+      <text x="220" y="140" fill="#ff79c6">Power BI</text>
+      <text x="32" y="168" fill="#50fa7b">C# / .NET</text>
+      <text x="200" y="168" fill="#50fa7b">CRISP-DM</text>
+      <text x="32" y="196" fill="#ffb86c">REST APIs</text>
+      <text x="200" y="196" fill="#ffb86c">Excel / Power Automate</text>
+      <text x="32" y="236"><tspan fill="#27c93f">miguel@profile</tspan><tspan fill="#9a9ab0">:~$ </tspan><tspan fill="#ffffff">_</tspan>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </text>
+    </g>
+
+  </g>
+</svg>
