@@ -200,6 +200,12 @@ Interesado en proyectos relacionados con:
 
 ---
 
+<!-- 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/output/github-contribution-grid-snake-dark.svg">
+  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/output/github-contribution-grid-snake.svg">
+</picture>
+-->
 
 <div align="center">
   <img src="./foot.svg" width="100%" alt="footer"/>
