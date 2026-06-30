@@ -100,6 +100,11 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 ---
 
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/TU_USUARIO/TU_USUARIO/main/assets/console/terminal.svg" alt="Terminal animada" width="700">
+</p>
+
 ## ⚙️ Stack tecnológico
 
 **Data & Analytics**
