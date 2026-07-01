@@ -1,0 +1,281 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+  <defs>
+    <!-- Gradientes -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6C63FF;stop-opacity:0.2" />
+      <stop offset="50%" style="stop-color:#6C63FF;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#6C63FF;stop-opacity:0.2" />
+    </linearGradient>
+
+    <linearGradient id="nodeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B" />
+      <stop offset="100%" style="stop-color:#FF8E53" />
+    </linearGradient>
+
+    <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ECDC4" />
+      <stop offset="100%" style="stop-color:#44B39D" />
+    </linearGradient>
+
+    <linearGradient id="nodeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A78BFA" />
+      <stop offset="100%" style="stop-color:#7C3AED" />
+    </linearGradient>
+
+    <!-- Sombras -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="cardShadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#6C63FF" flood-opacity="0.15"/>
+    </filter>
+
+    <!-- Animaciones -->
+    <style>
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      @keyframes pulse {
+        0%, 100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.1);
+          opacity: 0.7;
+        }
+      }
+
+      @keyframes nodePulse {
+        0%, 100% {
+          r: 6;
+          opacity: 0.8;
+        }
+        50% {
+          r: 10;
+          opacity: 0.3;
+        }
+      }
+
+      @keyframes lineGrow {
+        from {
+          stroke-dashoffset: 1000;
+        }
+        to {
+          stroke-dashoffset: 0;
+        }
+      }
+
+      .card {
+        animation: fadeInUp 0.6s ease-out forwards;
+        opacity: 0;
+      }
+      
+      .card:nth-child(1) { animation-delay: 0.2s; }
+      .card:nth-child(2) { animation-delay: 0.4s; }
+      .card:nth-child(3) { animation-delay: 0.6s; }
+
+      .node-pulse {
+        animation: nodePulse 2s ease-in-out infinite;
+      }
+
+      .node-pulse:nth-child(2) { animation-delay: 0.3s; }
+      .node-pulse:nth-child(3) { animation-delay: 0.6s; }
+
+      .timeline-line {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: lineGrow 1.5s ease-out forwards;
+        animation-delay: 0.5s;
+      }
+
+      .tag {
+        transition: all 0.3s ease;
+      }
+      
+      .tag:hover {
+        transform: translateY(-2px);
+        filter: brightness(1.2);
+      }
+    </style>
+  </defs>
+
+  <!-- Fondo -->
+  <rect width="900" height="1200" fill="url(#bgGrad)" rx="20"/>
+  
+  <!-- Patrón de fondo sutil -->
+  <g opacity="0.03">
+    <circle cx="100" cy="100" r="50" fill="white"/>
+    <circle cx="800" cy="200" r="70" fill="white"/>
+    <circle cx="50" cy="600" r="40" fill="white"/>
+    <circle cx="850" cy="900" r="60" fill="white"/>
+  </g>
+
+  <!-- Título -->
+  <g transform="translate(450, 60)" text-anchor="middle">
+    <text y="0" fill="white" font-size="32" font-weight="700" letter-spacing="2">
+      <tspan fill="url(#nodeGrad1)">✦</tspan> TRAYECTORIA PROFESIONAL
+    </text>
+    <text y="30" fill="#8888aa" font-size="14" letter-spacing="4">EXPERIENCIA LABORAL</text>
+    <line x1="-150" y1="50" x2="150" y2="50" stroke="url(#nodeGrad2)" stroke-width="1" opacity="0.3"/>
+  </g>
+
+  <!-- Línea central de tiempo -->
+  <line x1="450" y1="130" x2="450" y2="1100" stroke="url(#lineGrad)" stroke-width="3" class="timeline-line"/>
+
+  <!-- Experiencia 1: Data AI Quality Analyst -->
+  <g transform="translate(0, 170)">
+    <!-- Círculo en la línea -->
+    <circle cx="450" cy="0" r="12" fill="#1a1a2e" stroke="url(#nodeGrad1)" stroke-width="3" filter="url(#glow)"/>
+    <circle cx="450" cy="0" r="6" fill="url(#nodeGrad1)" class="node-pulse"/>
+    
+    <!-- Card -->
+    <g transform="translate(520, -30)" filter="url(#cardShadow)" class="card">
+      <rect x="0" y="0" width="340" height="200" rx="12" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+      
+      <!-- Header -->
+      <rect x="0" y="0" width="340" height="50" rx="12" fill="url(#nodeGrad1)" opacity="0.1"/>
+      <text x="20" y="20" fill="url(#nodeGrad1)" font-size="11" font-weight="600" letter-spacing="1">JUN 2025 - 2026</text>
+      <text x="20" y="42" fill="white" font-size="16" font-weight="700">Data AI Quality Analyst</text>
+      
+      <!-- Empresa -->
+      <text x="20" y="70" fill="#8888aa" font-size="13">🏢 INTELCIA S.A.S · Bogotá, Colombia</text>
+      
+      <!-- Descripción -->
+      <text x="20" y="96" fill="#ccccdd" font-size="11">
+        <tspan x="20" dy="0">Validación de datos generados por sistemas de IA en</tspan>
+        <tspan x="20" dy="16">plataformas e-commerce de alto tráfico (Miravia,</tspan>
+        <tspan x="20" dy="16">AliExpress), procesando miles de interacciones diarias.</tspan>
+      </text>
+      
+      <!-- Tags -->
+      <g transform="translate(20, 160)">
+        <rect x="0" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.2" class="tag"/>
+        <text x="27" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">Python</text>
+        
+        <rect x="62" y="0" width="50" height="22" rx="6" fill="#FF8E53" opacity="0.2" class="tag"/>
+        <text x="87" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">Excel</text>
+        
+        <rect x="119" y="0" width="60" height="22" rx="6" fill="#4ECDC4" opacity="0.2" class="tag"/>
+        <text x="149" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">PowerBI</text>
+        
+        <rect x="186" y="0" width="75" height="22" rx="6" fill="#A78BFA" opacity="0.2" class="tag"/>
+        <text x="223" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">PowerAutomate</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Experiencia 2: Backend Developer -->
+  <g transform="translate(0, 490)">
+    <!-- Círculo en la línea -->
+    <circle cx="450" cy="0" r="12" fill="#1a1a2e" stroke="url(#nodeGrad2)" stroke-width="3" filter="url(#glow)"/>
+    <circle cx="450" cy="0" r="6" fill="url(#nodeGrad2)" class="node-pulse"/>
+    
+    <!-- Card (izquierda) -->
+    <g transform="translate(-360, -30)" filter="url(#cardShadow)" class="card">
+      <rect x="0" y="0" width="340" height="200" rx="12" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+      
+      <rect x="0" y="0" width="340" height="50" rx="12" fill="url(#nodeGrad2)" opacity="0.1"/>
+      <text x="20" y="20" fill="#4ECDC4" font-size="11" font-weight="600" letter-spacing="1">OCT 2025 - ABR 2026</text>
+      <text x="20" y="42" fill="white" font-size="16" font-weight="700">Backend Developer Jr (Prácticas)</text>
+      
+      <text x="20" y="70" fill="#8888aa" font-size="13">🏢 Koop Technology</text>
+      
+      <text x="20" y="96" fill="#ccccdd" font-size="11">
+        <tspan x="20" dy="0">Desarrollo y mantenimiento de APIs REST en producción</tspan>
+        <tspan x="20" dy="16">con FastAPI, integradas a un frontend en React.</tspan>
+        <tspan x="20" dy="16">Participación activa en PRs y ceremonias ágiles.</tspan>
+      </text>
+      
+      <g transform="translate(20, 160)">
+        <rect x="0" y="0" width="55" height="22" rx="6" fill="#4ECDC4" opacity="0.2" class="tag"/>
+        <text x="27" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">Python</text>
+        
+        <rect x="62" y="0" width="60" height="22" rx="6" fill="#FF8E53" opacity="0.2" class="tag"/>
+        <text x="92" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">FastAPI</text>
+        
+        <rect x="129" y="0" width="45" height="22" rx="6" fill="#FF6B6B" opacity="0.2" class="tag"/>
+        <text x="151" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">SQL</text>
+        
+        <rect x="181" y="0" width="50" height="22" rx="6" fill="#A78BFA" opacity="0.2" class="tag"/>
+        <text x="206" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">React</text>
+        
+        <rect x="238" y="0" width="40" height="22" rx="6" fill="#4ECDC4" opacity="0.2" class="tag"/>
+        <text x="258" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">Git</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Experiencia 3: Full Stack Developer -->
+  <g transform="translate(0, 810)">
+    <!-- Círculo en la línea -->
+    <circle cx="450" cy="0" r="12" fill="#1a1a2e" stroke="url(#nodeGrad3)" stroke-width="3" filter="url(#glow)"/>
+    <circle cx="450" cy="0" r="6" fill="url(#nodeGrad3)" class="node-pulse"/>
+    
+    <!-- Card -->
+    <g transform="translate(520, -40)" filter="url(#cardShadow)" class="card">
+      <rect x="0" y="0" width="340" height="220" rx="12" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+      
+      <rect x="0" y="0" width="340" height="50" rx="12" fill="url(#nodeGrad3)" opacity="0.1"/>
+      <text x="20" y="20" fill="#A78BFA" font-size="11" font-weight="600" letter-spacing="1">ABR 2024 - JUL 2025</text>
+      <text x="20" y="42" fill="white" font-size="16" font-weight="700">Full Stack Developer (Freelance)</text>
+      
+      <text x="20" y="70" fill="#8888aa" font-size="13">🚀 Proyecto BarberB — Tecnoparque</text>
+      
+      <text x="20" y="96" fill="#ccccdd" font-size="11">
+        <tspan x="20" dy="0">Diseño e implementación de un ERP modular para</tspan>
+        <tspan x="20" dy="16">barberías y PYMEs, desde la arquitectura hasta</tspan>
+        <tspan x="20" dy="16">el despliegue en producción en GCP.</tspan>
+      </text>
+      
+      <g transform="translate(20, 170)">
+        <rect x="0" y="0" width="55" height="22" rx="6" fill="#A78BFA" opacity="0.2" class="tag"/>
+        <text x="27" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">Python</text>
+        
+        <rect x="62" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.2" class="tag"/>
+        <text x="89" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">Django</text>
+        
+        <rect x="124" y="0" width="50" height="22" rx="6" fill="#4ECDC4" opacity="0.2" class="tag"/>
+        <text x="149" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">MySQL</text>
+        
+        <rect x="181" y="0" width="40" height="22" rx="6" fill="#FF8E53" opacity="0.2" class="tag"/>
+        <text x="201" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">GCP</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Indicador de scroll/flujo -->
+  <g transform="translate(450, 1130)" opacity="0.3">
+    <circle cx="0" cy="0" r="4" fill="#6C63FF"/>
+    <line x1="0" y1="4" x2="0" y2="20" stroke="#6C63FF" stroke-width="1"/>
+    <polygon points="-3,18 3,18 0,24" fill="#6C63FF"/>
+  </g>
+
+  <!-- Badge de año -->
+  <g transform="translate(50, 1150)">
+    <text fill="#444466" font-size="10" letter-spacing="1">2024 — 2026</text>
+  </g>
+
+  <!-- Versión -->
+  <g transform="translate(800, 1150)">
+    <text fill="#444466" font-size="9" text-anchor="end">✦ v2.0</text>
+  </g>
+</svg>
