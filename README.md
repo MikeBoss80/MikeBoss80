@@ -1,3 +1,6 @@
+
+
+
 <div align="center">
   <img src="./header.svg" width="100%" alt="header"/>
 </div>
@@ -38,6 +41,11 @@ Lideré end-to-end el desarrollo de un **ERP modular para PYMEs** — arquitectu
 
 Orientado a soluciones mantenibles, con dominio de **Git**, metodologías ágiles y un enfoque constante en la **optimización basada en datos**.
 
+
+
+<p align="center">
+  <img src="./assets/experience_timeline.svg" alt="Experience Timeline">
+</p>
 
 
 ## 💼 Experiencia
