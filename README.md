@@ -5,6 +5,7 @@
 
 
 <br>
+<br>
 
 <p align="center">
   <a href="https://github.com/MikeBoss80"><img src="assets/social/github.svg" alt="GitHub"/></a>
@@ -15,10 +16,12 @@
 </p>
 
 
+<br>
 <div align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=700&size=22&pause=1000&color=2496ED&center=true&vCenter=true&width=800&lines=Fullstack+Developer+%7C+Data+Analyst;Building+scalable+web+applications;Transforming+data+into+decisions;Python+%7C+Django+%7C+FastAPI+%7C+.NET" />
 </div>
 
+<br>
 ## 🧠 Perfil profesional
 
 <div align="center">
@@ -35,7 +38,7 @@ Lideré end-to-end el desarrollo de un **ERP modular para PYMEs** — arquitectu
 
 Orientado a soluciones mantenibles, con dominio de **Git**, metodologías ágiles y un enfoque constante en la **optimización basada en datos**.
 
----
+
 
 ## 💼 Experiencia
 
@@ -64,11 +67,11 @@ Validación de datos generados por sistemas de IA en plataformas e-commerce de a
 <summary><b>🔍 Ver responsabilidades clave</b></summary>
 <br>
 
-- ✅ Evaluó métricas clave de modelos de IA (*accuracy*, *conversion rate*, costos operativos), identificando patrones y oportunidades de mejora en modelos de chat y sistemas de recomendación.
-- ✅ Desarrolló reportes estructurados y análisis estratégicos que respaldaron decisiones del equipo de producto.
-- ✅ Automatizó limpieza y transformación de datos con funciones avanzadas y macros de Excel, reduciendo tiempos operativos.
-- ✅ Aplicó metodología **CRISP-DM** en procesos de análisis end-to-end.
-- ✅ Monitoreó KPIs mediante dashboards internos para el control de calidad de los sistemas de IA.
+- Evaluó métricas clave de modelos de IA (*accuracy*, *conversion rate*, costos operativos), identificando patrones y oportunidades de mejora en modelos de chat y sistemas de recomendación.
+- Desarrolló reportes estructurados y análisis estratégicos que respaldaron decisiones del equipo de producto.
+- Automatizó limpieza y transformación de datos con funciones avanzadas y macros de Excel, reduciendo tiempos operativos.
+- Aplicó metodología **CRISP-DM** en procesos de análisis end-to-end.
+- Monitoreó KPIs mediante dashboards internos para el control de calidad de los sistemas de IA.
 
 **Stack:** 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -95,10 +98,10 @@ Desarrollo y mantenimiento de APIs REST en producción con FastAPI, integradas a
 <summary><b>🔍 Ver responsabilidades clave</b></summary>
 <br>
 
-- ✅ Implementó lógica de negocio, validaciones robustas y endpoints escalables orientados a producción.
-- ✅ Diseñó y optimizó consultas SQL y modelado relacional, aplicando ORMs para eficiencia y mantenibilidad.
-- ✅ Integró servicios backend con el frontend en React asegurando comunicación confiable vía APIs bien definidas.
-- ✅ Participó activamente en pull requests, revisiones de código y ceremonias ágiles.
+- Implementó lógica de negocio, validaciones robustas y endpoints escalables orientados a producción.
+- Diseñó y optimizó consultas SQL y modelado relacional, aplicando ORMs para eficiencia y mantenibilidad.
+- Integró servicios backend con el frontend en React asegurando comunicación confiable vía APIs bien definidas.
+- Participó activamente en pull requests, revisiones de código y ceremonias ágiles.
 
 **Stack:** 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -126,12 +129,12 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 <summary><b>🔍 Ver responsabilidades clave</b></summary>
 <br>
 
-- ✅ Arquitecturó el backend en Django aplicando *clean architecture* y separación de responsabilidades.
-- ✅ Implementó autenticación/autorización con flujos personalizados de recuperación de contraseña.
-- ✅ Modeló y optimizó la base de datos en MySQL con gestión de roles y permisos para múltiples tipos de usuario.
-- ✅ Desarrolló un dashboard administrativo con indicadores en tiempo real mediante AJAX.
-- ✅ Lideró decisiones técnicas, documentación y planificación del producto.
-- ✅ Desplegó la solución en infraestructura cloud (**GCP**).
+- Arquitecturó el backend en Django aplicando *clean architecture* y separación de responsabilidades.
+- Implementó autenticación/autorización con flujos personalizados de recuperación de contraseña.
+- Modeló y optimizó la base de datos en MySQL con gestión de roles y permisos para múltiples tipos de usuario.
+- Desarrolló un dashboard administrativo con indicadores en tiempo real mediante AJAX.
+- Lideró decisiones técnicas, documentación y planificación del producto.
+- Desplegó la solución en infraestructura cloud (**GCP**).
 
 **Stack:** 
 ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
@@ -144,11 +147,12 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 </td></tr>
 </table>
 
----
 
 <p align="center">
   <img src="./assets/console/terminal.svg" alt="Terminal animada" width="700">
 </p>
+
+<br>
 
 ## ⚙️ Stack tecnológico
 
@@ -182,33 +186,24 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 </div>
 
----
+<br>
 
 ## 📊 GitHub Stats
 
 <div align="center">
-
-<img src="https://github-readme-stats.vercel.app/api?username=MikeBoss80&show_icons=true&theme=radical&hide_border=true&count_private=true&bg_color=0d1117&title_color=2496ED&icon_color=00D4FF&text_color=ffffff" width="49%"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=MikeBoss80&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=2496ED&text_color=ffffff" width="49%"/>
-
 <br>
-<br>
-
 <img src="https://github-readme-streak-stats.herokuapp.com?user=MikeBoss80&theme=radical&hide_border=true&background=0d1117&stroke=00D4FF&ring=2496ED&fire=00D4FF&currStreakLabel=2496ED" width="70%"/>
-
 <br>
-<br>
-
 <img src="https://github-readme-activity-graph.vercel.app/graph?username=MikeBoss80&theme=react&hide_border=true&bg_color=0d1117&color=2496ED&line=00D4FF&point=ffffff&area=true&area_color=2496ED" width="90%"/>
-
 <br>
+<picture>
+<source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/output/github-contribution-grid-snake-dark.svg">
+<img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/output/github-contribution-grid-snake.svg">
+</picture>
 <br>
-
-<img src="https://github-profile-trophy.vercel.app/?username=MikeBoss80&theme=radical&no-frame=true&no-bg=true&row=1&column=7&margin-w=15" width="90%"/>
-
 </div>
 
----
+<br>
 
 ## 🚀 Proyectos destacados
 
@@ -223,7 +218,7 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 </div>
 
----
+<br>
 
 ## 🎓 Certificaciones
 
@@ -231,16 +226,16 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 | Certificación | Institución | Fecha |
 |---|---|---|
-| 🟢 Excel Analytics con IA y Python | Platzi | Abr 2026 |
-| 🟢 Business Intelligence: Utilidad y Áreas de Oportunidad | Platzi | Abr 2026 |
-| 🟢 Power BI + Inteligencia Artificial | Daxus Latam | Ene 2026 |
-| 🟢 Foundational C# with Microsoft | freeCodeCamp | Abr 2026 |
-| 🟢 Fundamentos de .NET | Platzi | Jul 2025 |
-| 🟢 Administrador de Bases de Datos Relacionales | CarlosSlim | Ago 2024 |
+| Excel Analytics con IA y Python | Platzi | Abr 2026 |
+| Business Intelligence: Utilidad y Áreas de Oportunidad | Platzi | Abr 2026 |
+| Power BI + Inteligencia Artificial | Daxus Latam | Ene 2026 |
+| Foundational C# with Microsoft | freeCodeCamp | Abr 2026 |
+| Fundamentos de .NET | Platzi | Jul 2025 |
+| Administrador de Bases de Datos Relacionales | CarlosSlim | Ago 2024 |
 
 </div>
 
----
+<br>
 
 ## 🗣️ Idiomas & Soft Skills
 
@@ -259,8 +254,8 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 </div>
 
----
 
+<br>
 ## 🤝 Colaboración
 
 <div align="center">
@@ -275,19 +270,18 @@ Interesado en proyectos relacionados con:
 
 </div>
 
----
 
-<!-- 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/output/github-contribution-grid-snake-dark.svg">
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/output/github-contribution-grid-snake.svg">
-</picture>
--->
+
+
+<br> 
+
+
 
 <div align="center">
   <img src="./foot.svg" width="100%" alt="footer"/>
 </div>
 
+<br>
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=125&section=footer&text=Let's%20Build%20Something%20Amazing&fontSize=28&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Powered%20by%20Code%20%26%20Coffee%20☕&descAlignY=60&descSize=16" />
 </div>
