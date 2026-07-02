@@ -1,10 +1,3 @@
-<div align="center">
-  <img src="./experience_timeline.svg" alt="Ruta Profesional" width="100%">
-</div>
-
-
-<br>
-
 
 <div align="center">
   <img src="./header.svg" width="100%" alt="header"/>
@@ -48,10 +41,10 @@ Orientado a soluciones mantenibles, con dominio de **Git**, metodologías ágile
 
 
 
-<p align="center">
-  <img src="./assets/experience_timeline.svg" alt="Experience Timeline">
-</p>
-
+<br>
+<div align="center">
+  <img src="./timeline.svg" alt="Ruta Profesional" width="100%">
+</div>
 
 ## 💼 Experiencia
 
@@ -61,8 +54,8 @@ Orientado a soluciones mantenibles, con dominio de **Git**, metodologías ágile
   <img src="https://img.shields.io/badge/🚀_PROJECTS-10+-8B5CF6?style=for-the-badge&labelColor=000000" />
 </div>
 
-<br>
 
+<br>
 <table>
 <tr><td width="100%">
 
@@ -282,14 +275,7 @@ Interesado en proyectos relacionados con:
 - 💡 Productos digitales con impacto real
 
 </div>
-
-
-
-
 <br> 
-
-
-
 <div align="center">
   <img src="./foot.svg" width="100%" alt="footer"/>
 </div>
