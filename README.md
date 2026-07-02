@@ -1,4 +1,8 @@
+<p align="center">
+  <img src="./assets/experience_timeline.svg" alt="Ruta Profesional">
+</p>
 
+<br>
 
 
 <div align="center">
