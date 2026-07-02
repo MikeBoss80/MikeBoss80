@@ -88,37 +88,37 @@
       <!-- Cursos -->
       <text x="32" y="172">
         <tspan fill="#50fa7b">-</tspan>
-        <tspan fill="#f8f8f2" dx="20">Excel Analytics con IA y Python</tspan>
+        <tspan fill="#f8f8f2" dx="7">Excel Analytics con IA y Python</tspan>
         <tspan fill="#6272a4" dx="210" font-size="12">Platzi · Abr 2026</tspan>
       </text>
       
       <text x="32" y="196">
         <tspan fill="#50fa7b">-</tspan>
-        <tspan fill="#f8f8f2" dx="20">Business Intelligence: Utilidad y Áreas de Oportunidad</tspan>
+        <tspan fill="#f8f8f2" dx="7">Business Intelligence: Utilidad y Áreas de Oportunidad</tspan>
         <tspan fill="#6272a4" dx="28" font-size="12">Platzi · Abr 2026</tspan>
       </text>
       
       <text x="32" y="220">
         <tspan fill="#50fa7b">-</tspan>
-        <tspan fill="#f8f8f2" dx="20">Power BI + Inteligencia Artificial</tspan>
+        <tspan fill="#f8f8f2" dx="7">Power BI + Inteligencia Artificial</tspan>
         <tspan fill="#6272a4" dx="187" font-size="12">Daxus · Ene 2026</tspan>
       </text>
       
       <text x="32" y="244">
         <tspan fill="#50fa7b">-</tspan>
-        <tspan fill="#f8f8f2" dx="20">Foundational C# with Microsoft</tspan>
+        <tspan fill="#f8f8f2" dx="7">Foundational C# with Microsoft</tspan>
         <tspan fill="#6272a4" dx="218" font-size="12">freeCodeCamp · Abr 2026</tspan>
       </text>
       
       <text x="32" y="268">
         <tspan fill="#50fa7b">-</tspan>
-        <tspan fill="#f8f8f2" dx="20">Fundamentos de .NET</tspan>
+        <tspan fill="#f8f8f2" dx="7">Fundamentos de .NET</tspan>
         <tspan fill="#6272a4" dx="305" font-size="12">Platzi · Jul 2025</tspan>
       </text>
       
       <text x="32" y="292">
         <tspan fill="#50fa7b">-</tspan>
-        <tspan fill="#f8f8f2" dx="20">Administrador de Bases de Datos Relacionales</tspan>
+        <tspan fill="#f8f8f2" dx="7">Administrador de Bases de Datos Relacionales</tspan>
         <tspan fill="#6272a4" dx="107" font-size="12">CarlosSlim · Ago 2024</tspan>
       </text>
       
