@@ -13,12 +13,6 @@
       <stop offset="100%" style="stop-color:#A78BFA" />
     </linearGradient>
 
-    <linearGradient id="pathGlow" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:0.3" />
-      <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:0.3" />
-    </linearGradient>
-
-    <!-- Gradientes para tarjetas -->
     <linearGradient id="card1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:0.1" />
       <stop offset="100%" style="stop-color:#FF8E53;stop-opacity:0.05" />
@@ -35,15 +29,7 @@
     </linearGradient>
 
     <filter id="glow">
-      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-
-    <filter id="glowStrong">
-      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -53,100 +39,6 @@
     <filter id="cardShadow">
       <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#6C63FF" flood-opacity="0.15"/>
     </filter>
-
-    <filter id="cardGlow">
-      <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#6C63FF" flood-opacity="0.1"/>
-    </filter>
-
-    <style>
-      @keyframes flyIn {
-        from { opacity: 0; transform: translateY(50px) scale(0.9); }
-        to { opacity: 1; transform: translateY(0) scale(1); }
-      }
-      
-      @keyframes flyInLeft {
-        from { opacity: 0; transform: translateX(-60px) scale(0.9); }
-        to { opacity: 1; transform: translateX(0) scale(1); }
-      }
-      
-      @keyframes flyInRight {
-        from { opacity: 0; transform: translateX(60px) scale(0.9); }
-        to { opacity: 1; transform: translateX(0) scale(1); }
-      }
-      
-      @keyframes dash {
-        to { stroke-dashoffset: 0; }
-      }
-
-      @keyframes pulse {
-        0%, 100% { transform: scale(1); opacity: 0.6; }
-        50% { transform: scale(1.2); opacity: 0.2; }
-      }
-
-      @keyframes float {
-        0%, 100% { transform: translateY(0px); }
-        50% { transform: translateY(-5px); }
-      }
-
-      @keyframes shimmer {
-        0% { background-position: -200% 0; }
-        100% { background-position: 200% 0; }
-      }
-      
-      .card {
-        animation: flyIn 0.7s ease-out forwards;
-        opacity: 0;
-      }
-      .card:nth-child(1) { animation-delay: 0.4s; }
-      .card:nth-child(2) { animation-delay: 0.7s; }
-      .card:nth-child(3) { animation-delay: 1.0s; }
-
-      .card-left {
-        animation: flyInLeft 0.7s ease-out forwards;
-        opacity: 0;
-      }
-      .card-left:nth-child(1) { animation-delay: 0.5s; }
-
-      .card-right {
-        animation: flyInRight 0.7s ease-out forwards;
-        opacity: 0;
-      }
-      .card-right:nth-child(1) { animation-delay: 0.8s; }
-      .card-right:nth-child(2) { animation-delay: 1.1s; }
-      
-      .road {
-        stroke-dasharray: 1200;
-        stroke-dashoffset: 1200;
-        animation: dash 2.5s ease-out forwards;
-        animation-delay: 0.3s;
-      }
-
-      .road-glow {
-        stroke-dasharray: 1200;
-        stroke-dashoffset: 1200;
-        animation: dash 2.5s ease-out forwards;
-        animation-delay: 0.5s;
-      }
-
-      .pulse-ring {
-        animation: pulse 2s ease-in-out infinite;
-      }
-
-      .float-item {
-        animation: float 3s ease-in-out infinite;
-      }
-
-      .float-item:nth-child(2) { animation-delay: 0.5s; }
-      .float-item:nth-child(3) { animation-delay: 1s; }
-
-      .shimmer-text {
-        background: linear-gradient(90deg, #FF6B6B, #A78BFA, #4ECDC4, #FF6B6B);
-        background-size: 200% auto;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        animation: shimmer 4s linear infinite;
-      }
-    </style>
   </defs>
 
   <!-- Fondo -->
@@ -179,7 +71,7 @@
   </g>
 
   <!-- Línea de ruta con glow -->
-  <path class="road-glow" d="M 100 750 
+  <path d="M 100 750 
     Q 250 750, 350 580 
     Q 450 410, 550 410 
     Q 650 410, 750 280 
@@ -187,41 +79,41 @@
     fill="none" stroke="url(#pathGrad)" stroke-width="12" opacity="0.1"/>
 
   <!-- Línea de ruta principal -->
-  <path class="road" d="M 100 750 
+  <path d="M 100 750 
     Q 250 750, 350 580 
     Q 450 410, 550 410 
     Q 650 410, 750 280 
     Q 850 150, 950 150" 
     fill="none" stroke="url(#pathGrad)" stroke-width="3" opacity="0.8"/>
 
-  <!-- Puntos de ruta con efectos -->
+  <!-- Puntos de ruta -->
   <!-- Origen -->
   <g transform="translate(100, 750)">
     <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="4" fill="#FF6B6B" class="pulse-ring"/>
+    <circle cx="0" cy="0" r="4" fill="#FF6B6B"/>
     <text y="25" fill="#8888aa" font-size="9" text-anchor="middle" letter-spacing="1">INICIO</text>
   </g>
 
   <!-- Waypoint 1 -->
   <g transform="translate(350, 580)">
-    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2.5" filter="url(#glowStrong)"/>
-    <circle cx="0" cy="0" r="5" fill="#FF6B6B" class="pulse-ring"/>
+    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2.5" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="5" fill="#FF6B6B"/>
     <text y="-20" fill="#FF6B6B" font-size="9" font-weight="700" text-anchor="middle">◆ 2025</text>
     <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Junio</text>
   </g>
 
   <!-- Waypoint 2 -->
   <g transform="translate(550, 410)">
-    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#4ECDC4" stroke-width="2.5" filter="url(#glowStrong)"/>
-    <circle cx="0" cy="0" r="5" fill="#4ECDC4" class="pulse-ring"/>
+    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#4ECDC4" stroke-width="2.5" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="5" fill="#4ECDC4"/>
     <text y="-20" fill="#4ECDC4" font-size="9" font-weight="700" text-anchor="middle">◆ 2025</text>
     <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Octubre</text>
   </g>
 
   <!-- Waypoint 3 -->
   <g transform="translate(750, 280)">
-    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2.5" filter="url(#glowStrong)"/>
-    <circle cx="0" cy="0" r="5" fill="#A78BFA" class="pulse-ring"/>
+    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2.5" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="5" fill="#A78BFA"/>
     <text y="-20" fill="#A78BFA" font-size="9" font-weight="700" text-anchor="middle">◆ 2024</text>
     <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Abril</text>
   </g>
@@ -229,128 +121,119 @@
   <!-- Destino -->
   <g transform="translate(950, 150)">
     <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="4" fill="#A78BFA" class="pulse-ring"/>
+    <circle cx="0" cy="0" r="4" fill="#A78BFA"/>
     <text y="25" fill="#8888aa" font-size="9" text-anchor="middle" letter-spacing="1">ACTUAL</text>
   </g>
 
   <!-- Experiencia 1: Data AI Quality Analyst -->
-  <g class="card-left">
-    <g transform="translate(130, 510)" filter="url(#cardShadow)">
-      <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
-      <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card1Grad)"/>
+  <g transform="translate(130, 510)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+    <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card1Grad)"/>
+    
+    <rect x="0" y="0" width="6" height="190" rx="3" fill="#FF6B6B"/>
+    
+    <circle cx="30" cy="30" r="18" fill="#FF6B6B" opacity="0.15"/>
+    <text x="30" y="35" fill="#FF6B6B" font-size="16" text-anchor="middle">📊</text>
+    
+    <text x="60" y="25" fill="#FF6B6B" font-size="10" font-weight="700" letter-spacing="1">JUN 2025 - 2026</text>
+    <text x="60" y="48" fill="white" font-size="16" font-weight="700">Data AI Quality Analyst</text>
+    <text x="60" y="70" fill="#8888aa" font-size="11">INTELCIA S.A.S · Bogotá, Colombia</text>
+    
+    <text x="20" y="98" fill="#ccccdd" font-size="10.5">
+      <tspan x="20" dy="0">Validación de datos generados por sistemas de IA en</tspan>
+      <tspan x="20" dy="16">plataformas e-commerce de alto tráfico (Miravia,</tspan>
+      <tspan x="20" dy="16">AliExpress), procesando miles de interacciones.</tspan>
+    </text>
+    
+    <g transform="translate(20, 160)">
+      <rect x="0" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
+      <text x="27" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">Python</text>
       
-      <!-- Barra lateral color -->
-      <rect x="0" y="0" width="6" height="190" rx="3" fill="#FF6B6B"/>
+      <rect x="62" y="0" width="50" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
+      <text x="87" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">Excel</text>
       
-      <!-- Icono -->
-      <circle cx="30" cy="30" r="18" fill="#FF6B6B" opacity="0.15"/>
-      <text x="30" y="35" fill="#FF6B6B" font-size="16" text-anchor="middle">📊</text>
+      <rect x="119" y="0" width="60" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
+      <text x="149" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">PowerBI</text>
       
-      <text x="60" y="25" fill="#FF6B6B" font-size="10" font-weight="700" letter-spacing="1">JUN 2025 - 2026</text>
-      <text x="60" y="48" fill="white" font-size="16" font-weight="700">Data AI Quality Analyst</text>
-      <text x="60" y="70" fill="#8888aa" font-size="11">INTELCIA S.A.S · Bogotá, Colombia</text>
-      
-      <text x="20" y="98" fill="#ccccdd" font-size="10.5">
-        <tspan x="20" dy="0">Validación de datos generados por sistemas de IA en</tspan>
-        <tspan x="20" dy="16">plataformas e-commerce de alto tráfico (Miravia,</tspan>
-        <tspan x="20" dy="16">AliExpress), procesando miles de interacciones.</tspan>
-      </text>
-      
-      <!-- Tags -->
-      <g transform="translate(20, 160)">
-        <rect x="0" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
-        <text x="27" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">Python</text>
-        
-        <rect x="62" y="0" width="50" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
-        <text x="87" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">Excel</text>
-        
-        <rect x="119" y="0" width="60" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
-        <text x="149" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">PowerBI</text>
-        
-        <rect x="186" y="0" width="75" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
-        <text x="223" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">PowerAutomate</text>
-      </g>
+      <rect x="186" y="0" width="75" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
+      <text x="223" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">PowerAutomate</text>
     </g>
   </g>
 
   <!-- Experiencia 2: Backend Developer Jr -->
-  <g class="card-right">
-    <g transform="translate(580, 310)" filter="url(#cardShadow)">
-      <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
-      <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card2Grad)"/>
+  <g transform="translate(580, 310)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+    <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card2Grad)"/>
+    
+    <rect x="0" y="0" width="6" height="190" rx="3" fill="#4ECDC4"/>
+    
+    <circle cx="30" cy="30" r="18" fill="#4ECDC4" opacity="0.15"/>
+    <text x="30" y="35" fill="#4ECDC4" font-size="16" text-anchor="middle">⚡</text>
+    
+    <text x="60" y="25" fill="#4ECDC4" font-size="10" font-weight="700" letter-spacing="1">OCT 2025 - ABR 2026</text>
+    <text x="60" y="48" fill="white" font-size="16" font-weight="700">Backend Developer Jr</text>
+    <text x="60" y="70" fill="#8888aa" font-size="11">Koop Technology · Prácticas</text>
+    
+    <text x="20" y="98" fill="#ccccdd" font-size="10.5">
+      <tspan x="20" dy="0">Desarrollo y mantenimiento de APIs REST en</tspan>
+      <tspan x="20" dy="16">producción con FastAPI, integradas a un</tspan>
+      <tspan x="20" dy="16">frontend en React. Participación en PRs.</tspan>
+    </text>
+    
+    <g transform="translate(20, 160)">
+      <rect x="0" y="0" width="55" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
+      <text x="27" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">Python</text>
       
-      <rect x="0" y="0" width="6" height="190" rx="3" fill="#4ECDC4"/>
+      <rect x="62" y="0" width="60" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
+      <text x="92" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">FastAPI</text>
       
-      <circle cx="30" cy="30" r="18" fill="#4ECDC4" opacity="0.15"/>
-      <text x="30" y="35" fill="#4ECDC4" font-size="16" text-anchor="middle">⚡</text>
+      <rect x="129" y="0" width="45" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
+      <text x="151" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">SQL</text>
       
-      <text x="60" y="25" fill="#4ECDC4" font-size="10" font-weight="700" letter-spacing="1">OCT 2025 - ABR 2026</text>
-      <text x="60" y="48" fill="white" font-size="16" font-weight="700">Backend Developer Jr</text>
-      <text x="60" y="70" fill="#8888aa" font-size="11">Koop Technology · Prácticas</text>
+      <rect x="181" y="0" width="50" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
+      <text x="206" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">React</text>
       
-      <text x="20" y="98" fill="#ccccdd" font-size="10.5">
-        <tspan x="20" dy="0">Desarrollo y mantenimiento de APIs REST en</tspan>
-        <tspan x="20" dy="16">producción con FastAPI, integradas a un</tspan>
-        <tspan x="20" dy="16">frontend en React. Participación en PRs.</tspan>
-      </text>
-      
-      <g transform="translate(20, 160)">
-        <rect x="0" y="0" width="55" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
-        <text x="27" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">Python</text>
-        
-        <rect x="62" y="0" width="60" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
-        <text x="92" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">FastAPI</text>
-        
-        <rect x="129" y="0" width="45" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
-        <text x="151" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">SQL</text>
-        
-        <rect x="181" y="0" width="50" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
-        <text x="206" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">React</text>
-        
-        <rect x="238" y="0" width="40" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
-        <text x="258" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">Git</text>
-      </g>
+      <rect x="238" y="0" width="40" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
+      <text x="258" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">Git</text>
     </g>
   </g>
 
   <!-- Experiencia 3: Full Stack Developer -->
-  <g class="card-right">
-    <g transform="translate(780, 120)" filter="url(#cardShadow)">
-      <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
-      <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card3Grad)"/>
+  <g transform="translate(780, 120)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+    <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card3Grad)"/>
+    
+    <rect x="0" y="0" width="6" height="190" rx="3" fill="#A78BFA"/>
+    
+    <circle cx="30" cy="30" r="18" fill="#A78BFA" opacity="0.15"/>
+    <text x="30" y="35" fill="#A78BFA" font-size="16" text-anchor="middle">💎</text>
+    
+    <text x="60" y="25" fill="#A78BFA" font-size="10" font-weight="700" letter-spacing="1">ABR 2024 - JUL 2025</text>
+    <text x="60" y="48" fill="white" font-size="16" font-weight="700">Full Stack Developer</text>
+    <text x="60" y="70" fill="#8888aa" font-size="11">BarberB — Tecnoparque · Freelance</text>
+    
+    <text x="20" y="98" fill="#ccccdd" font-size="10.5">
+      <tspan x="20" dy="0">Diseño e implementación de un ERP modular para</tspan>
+      <tspan x="20" dy="16">barberías y PYMEs, desde la arquitectura hasta</tspan>
+      <tspan x="20" dy="16">el despliegue en producción en GCP.</tspan>
+    </text>
+    
+    <g transform="translate(20, 160)">
+      <rect x="0" y="0" width="55" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
+      <text x="27" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">Python</text>
       
-      <rect x="0" y="0" width="6" height="190" rx="3" fill="#A78BFA"/>
+      <rect x="62" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
+      <text x="89" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">Django</text>
       
-      <circle cx="30" cy="30" r="18" fill="#A78BFA" opacity="0.15"/>
-      <text x="30" y="35" fill="#A78BFA" font-size="16" text-anchor="middle">💎</text>
+      <rect x="124" y="0" width="50" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
+      <text x="149" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">MySQL</text>
       
-      <text x="60" y="25" fill="#A78BFA" font-size="10" font-weight="700" letter-spacing="1">ABR 2024 - JUL 2025</text>
-      <text x="60" y="48" fill="white" font-size="16" font-weight="700">Full Stack Developer</text>
-      <text x="60" y="70" fill="#8888aa" font-size="11">BarberB — Tecnoparque · Freelance</text>
-      
-      <text x="20" y="98" fill="#ccccdd" font-size="10.5">
-        <tspan x="20" dy="0">Diseño e implementación de un ERP modular para</tspan>
-        <tspan x="20" dy="16">barberías y PYMEs, desde la arquitectura hasta</tspan>
-        <tspan x="20" dy="16">el despliegue en producción en GCP.</tspan>
-      </text>
-      
-      <g transform="translate(20, 160)">
-        <rect x="0" y="0" width="55" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
-        <text x="27" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">Python</text>
-        
-        <rect x="62" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
-        <text x="89" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">Django</text>
-        
-        <rect x="124" y="0" width="50" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
-        <text x="149" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">MySQL</text>
-        
-        <rect x="181" y="0" width="40" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
-        <text x="201" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">GCP</text>
-      </g>
+      <rect x="181" y="0" width="40" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
+      <text x="201" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">GCP</text>
     </g>
   </g>
 
-  <!-- Conectores visuales entre tarjetas y ruta -->
+  <!-- Conectores visuales -->
   <g opacity="0.15">
     <line x1="350" y1="580" x2="430" y2="580" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="4,4"/>
     <line x1="550" y1="410" x2="580" y2="410" stroke="#4ECDC4" stroke-width="1" stroke-dasharray="4,4"/>
