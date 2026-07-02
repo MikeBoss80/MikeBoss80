@@ -213,7 +213,7 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 ## 🚀 Proyectos destacados
 
 <div align="center">
-  <img src="./assets/carrusel/preview.gif" width="540" alt="Carrusel de proyectos">
+  <img src="./assets/carrusel/preview.webp" width="540" alt="Carrusel de proyectos">
   <br><br>
   <p><i>Proyectos destacados — arrastra o usa las flechas para explorar</i></p>
 </div>
@@ -221,7 +221,7 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 <br>
 
 <div align="center">
-  <a href="https://mikeboss80.github.io/carrusel/">
+  <a href="https://mikeboss80.github.io/MikeBoss80/carrusel/">
     <img src="https://img.shields.io/badge/🎠-Ver_Carrusel_3D_Interactivo-0A66C2?style=for-the-badge&labelColor=1a1f3a&logo=github" />
   </a>
 </div>
@@ -236,6 +236,7 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 [![♻️ Reciclaje](https://img.shields.io/badge/♻️-Reciclaje-06B6D4?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/prueba_data_analyst_cempre)
 [![🚍 Dashboard](https://img.shields.io/badge/🚍-Transporte-F59E0B?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/power_bi_transport_incident_dashboard)
 [![🔧 Mattech](https://img.shields.io/badge/🔧-Mattech-10B981?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/Mattech)
+[![⚖️ LawHonor](https://img.shields.io/badge/⚖️-LawHonor-F59E0B?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/LawHonor)
 [![📄 README](https://img.shields.io/badge/📄-Perfil-EC4899?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/MikeBoss80)
 
 </div>
