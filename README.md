@@ -212,6 +212,19 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 ## 🚀 Proyectos destacados
 
+
+<p align="center">
+  <a href="https://mikeboss80.github.io/carrusel/">
+    <img src="https://img.shields.io/badge/🎠_Ver_Mis_Proyectos_en_3D-✨-0A66C2?style=for-the-badge&labelColor=1a1f3a" />
+  </a>
+</p>
+
+<p align="center">
+  <i>Un carrusel interactivo estilo Cover Flow con mis mejores proyectos</i>
+</p>
+
+<br>
+
 <div align="center">
 
 | Proyecto | Descripción | Tecnologías |
