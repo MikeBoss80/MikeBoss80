@@ -212,27 +212,31 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 ## 🚀 Proyectos destacados
 
+<div align="center">
+  <img src="./assets/carrusel/preview.gif" width="540" alt="Carrusel de proyectos">
+  <br><br>
+  <p><i>Proyectos destacados — arrastra o usa las flechas para explorar</i></p>
+</div>
 
-<p align="center">
+<br>
+
+<div align="center">
   <a href="https://mikeboss80.github.io/carrusel/">
-    <img src="https://img.shields.io/badge/🎠_Ver_Mis_Proyectos_en_3D-✨-0A66C2?style=for-the-badge&labelColor=1a1f3a" />
+    <img src="https://img.shields.io/badge/🎠-Ver_Carrusel_3D_Interactivo-0A66C2?style=for-the-badge&labelColor=1a1f3a&logo=github" />
   </a>
-</p>
-
-<p align="center">
-  <i>Un carrusel interactivo estilo Cover Flow con mis mejores proyectos</i>
-</p>
+</div>
 
 <br>
 
 <div align="center">
 
-| Proyecto | Descripción | Tecnologías |
-|---|---|---|
-| [**🏪 BarberB**](https://github.com/miikeboss80/BarberB) | ERP modular para PYMEs: citas, inventario, usuarios, reportes y dashboard en tiempo real. | ![Django](https://img.shields.io/badge/Django-092E20?style=flat-square&logo=django&logoColor=white) ![MySQL](https://img.shields.io/badge/MySQL-005C84?style=flat-square&logo=mysql&logoColor=white) ![GCP](https://img.shields.io/badge/GCP-4285F4?style=flat-square&logo=googlecloud&logoColor=white) |
-| [**🦠 Análisis COVID-19**](https://github.com/MikeBoss80/covid_hospitalization_analysis) | Limpieza, análisis y dashboard en Power BI de datos de hospitalización (CDC). | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![PowerBI](https://img.shields.io/badge/Power_BI-F2C811?style=flat-square&logo=powerbi&logoColor=black) |
-| [**♻️ Análisis de reciclaje**](https://github.com/MikeBoss80/prueba_data_analyst_cempre) | Análisis de datos ambientales para visualización y toma de decisiones. | ![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white) ![SQL](https://img.shields.io/badge/SQL-336791?style=flat-square&logo=postgresql&logoColor=white) |
-| [**💼 Portafolio Web**](https://github.com/miikeboss80/Portafolio) | Sitio personal con experiencia, proyectos y contacto. | ![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white) ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white) ![JS](https://img.shields.io/badge/JS-F7DF1E?style=flat-square&logo=javascript&logoColor=black) |
+[![🏪 BarberB](https://img.shields.io/badge/🏪-BarberB-2496ED?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/web_barberb)
+[![💼 Portafolio Web](https://img.shields.io/badge/💼-Portafolio-8B5CF6?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/Portafolio)
+[![🦠 COVID-19](https://img.shields.io/badge/🦠-COVID--19-00D4FF?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/covid_hospitalization_analysis)
+[![♻️ Reciclaje](https://img.shields.io/badge/♻️-Reciclaje-06B6D4?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/prueba_data_analyst_cempre)
+[![🚍 Dashboard](https://img.shields.io/badge/🚍-Transporte-F59E0B?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/power_bi_transport_incident_dashboard)
+[![🔧 Mattech](https://img.shields.io/badge/🔧-Mattech-10B981?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/Mattech)
+[![📄 README](https://img.shields.io/badge/📄-Perfil-EC4899?style=for-the-badge&labelColor=1a1f3a)](https://github.com/MikeBoss80/MikeBoss80)
 
 </div>
 

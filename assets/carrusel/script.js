@@ -5,46 +5,53 @@
    ============================================================ */
 const PROJECTS = [
   {
-    title: "Proyecto 1",
-    desc: "Descripción breve de tu primer proyecto.",
-    img: "images/proyecto1.png",
-    link: "https://github.com/MikeBoss80/proyecto1"
+    title: "BarberB",
+    desc: "ERP modular para barberías y PYMEs: citas, inventario, usuarios, reportes y dashboard en tiempo real.",
+    img: "images/barberb.png",
+    link: "https://github.com/MikeBoss80/web_barberb",
+    tech: "Django · MySQL · GCP"
   },
   {
-    title: "Proyecto 2",
-    desc: "Otro proyecto increíble que quieres mostrar.",
-    img: "images/proyecto2.png",
-    link: "https://github.com/MikeBoss80/proyecto2"
+    title: "Portafolio Web",
+    desc: "Sitio web personal con experiencia profesional, proyectos destacados y sección de contacto.",
+    img: "images/portafolio.png",
+    link: "https://github.com/MikeBoss80/Portafolio",
+    tech: "HTML · CSS · JavaScript"
   },
   {
-    title: "Proyecto 3",
-    desc: "Una app web con diseño moderno.",
-    img: "images/proyecto3.png",
-    link: "https://github.com/MikeBoss80/proyecto3"
+    title: "Análisis COVID-19",
+    desc: "Limpieza, análisis exploratorio y dashboard Power BI de datos de hospitalización del CDC.",
+    img: "images/covid19.png",
+    link: "https://github.com/MikeBoss80/covid_hospitalization_analysis",
+    tech: "Python · Power BI"
   },
   {
-    title: "Proyecto 4",
-    desc: "Librería open-source en JavaScript.",
-    img: "images/proyecto4.png",
-    link: "https://github.com/MikeBoss80/proyecto4"
+    title: "Análisis de Reciclaje",
+    desc: "Análisis de datos ambientales para visualización y apoyo a la toma de decisiones estratégicas.",
+    img: "images/reciclaje.png",
+    link: "https://github.com/MikeBoss80/prueba_data_analyst_cempre",
+    tech: "Python · SQL"
   },
   {
-    title: "Proyecto 5",
-    desc: "Dashboard con analíticas en tiempo real.",
-    img: "images/proyecto5.png",
-    link: "https://github.com/MikeBoss80/proyecto5"
+    title: "Dashboard Transporte",
+    desc: "Dashboard interactivo en Power BI para monitoreo y análisis de incidentes de transporte.",
+    img: "images/dashboard-transporte.png",
+    link: "https://github.com/MikeBoss80/power_bi_transport_incident_dashboard",
+    tech: "Power BI"
   },
   {
-    title: "Proyecto 6",
-    desc: "API REST con Node.js y MongoDB.",
-    img: "images/proyecto6.png",
-    link: "https://github.com/MikeBoss80/proyecto6"
+    title: "Mattech",
+    desc: "Proyecto de desarrollo y análisis orientado a soluciones tecnológicas con Python.",
+    img: "images/mattech.png",
+    link: "https://github.com/MikeBoss80/Mattech",
+    tech: "Python"
   },
   {
-    title: "Proyecto 7",
-    desc: "Juego 2D hecho con Canvas.",
-    img: "images/proyecto7.png",
-    link: "https://github.com/MikeBoss80/proyecto7"
+    title: "Perfil README",
+    desc: "Profile README interactivo con estadísticas, timeline y stack tecnológico completo.",
+    img: "images/perfil-readme.png",
+    link: "https://github.com/MikeBoss80/MikeBoss80",
+    tech: "Markdown · SVG · JS"
   }
 ];
 
@@ -63,7 +70,7 @@ const carousel    = document.getElementById("carousel");
 
 const N           = PROJECTS.length;
 const angleStep   = 360 / N;           // grados entre tarjetas
-const radius      = Math.max(320, N * 55); // radio del círculo 3D
+const radius      = Math.max(380, N * 58); // radio del círculo 3D
 let   currentIndex = 0;
 let   rotation     = 0;
 let   autoplayId   = null;
@@ -78,7 +85,6 @@ function buildCards() {
       <img src="${p.img}" alt="${p.title}" loading="lazy" />
       <div class="card__overlay">
         <h3>${p.title}</h3>
-        <span>${p.desc}</span>
       </div>
     `;
     track.appendChild(card);
@@ -142,6 +148,7 @@ function updateActive() {
   infoTitle.textContent = p.title;
   infoDesc.textContent  = p.desc;
   infoLink.href         = p.link;
+  document.getElementById("infoTech").textContent = p.tech;
 }
 
 function shortestDistance(a, b) {
@@ -165,7 +172,7 @@ function prev() { goTo(currentIndex - 1); }
 /* ---------- Autoplay ---------- */
 function startAutoplay() {
   stopAutoplay();
-  autoplayId = setInterval(next, 3500);
+  autoplayId = setInterval(next, 4000);
 }
 function stopAutoplay() {
   if (autoplayId) clearInterval(autoplayId);
@@ -233,6 +240,12 @@ function snapToNearest() {
   const idx = Math.round(normalized / angleStep) % N;
   goTo(idx);
 }
+
+/* Pausar al hacer hover */
+carousel.addEventListener("mouseenter", stopAutoplay);
+carousel.addEventListener("mouseleave", startAutoplay);
+info.addEventListener("mouseenter", stopAutoplay);
+info.addEventListener("mouseleave", startAutoplay);
 
 /* ---------- Inicializar ---------- */
 buildCards();
