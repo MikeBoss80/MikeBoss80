@@ -1,35 +1,49 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 900" font-family="'Segoe UI', system-ui, -apple-system, sans-serif">
   <defs>
-    <!-- Gradientes -->
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0a0a1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d0d24;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#1a1a2e;stop-opacity:1" />
     </linearGradient>
     
-    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#6C63FF;stop-opacity:0.2" />
-      <stop offset="50%" style="stop-color:#6C63FF;stop-opacity:0.8" />
-      <stop offset="100%" style="stop-color:#6C63FF;stop-opacity:0.2" />
-    </linearGradient>
-
-    <linearGradient id="nodeGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#FF6B6B" />
-      <stop offset="100%" style="stop-color:#FF8E53" />
+      <stop offset="35%" style="stop-color:#FF8E53" />
+      <stop offset="70%" style="stop-color:#4ECDC4" />
+      <stop offset="100%" style="stop-color:#A78BFA" />
     </linearGradient>
 
-    <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#4ECDC4" />
-      <stop offset="100%" style="stop-color:#44B39D" />
+    <linearGradient id="pathGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#A78BFA;stop-opacity:0.3" />
     </linearGradient>
 
-    <linearGradient id="nodeGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#A78BFA" />
-      <stop offset="100%" style="stop-color:#7C3AED" />
+    <!-- Gradientes para tarjetas -->
+    <linearGradient id="card1Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FF8E53;stop-opacity:0.05" />
     </linearGradient>
 
-    <!-- Sombras -->
+    <linearGradient id="card2Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4ECDC4;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#44B39D;stop-opacity:0.05" />
+    </linearGradient>
+
+    <linearGradient id="card3Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A78BFA;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.05" />
+    </linearGradient>
+
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
       <feMerge>
         <feMergeNode in="coloredBlur"/>
         <feMergeNode in="SourceGraphic"/>
@@ -37,245 +51,320 @@
     </filter>
 
     <filter id="cardShadow">
-      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#6C63FF" flood-opacity="0.15"/>
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#6C63FF" flood-opacity="0.15"/>
     </filter>
 
-    <!-- Animaciones -->
+    <filter id="cardGlow">
+      <feDropShadow dx="0" dy="0" stdDeviation="15" flood-color="#6C63FF" flood-opacity="0.1"/>
+    </filter>
+
     <style>
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(30px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+      @keyframes flyIn {
+        from { opacity: 0; transform: translateY(50px) scale(0.9); }
+        to { opacity: 1; transform: translateY(0) scale(1); }
       }
       
+      @keyframes flyInLeft {
+        from { opacity: 0; transform: translateX(-60px) scale(0.9); }
+        to { opacity: 1; transform: translateX(0) scale(1); }
+      }
+      
+      @keyframes flyInRight {
+        from { opacity: 0; transform: translateX(60px) scale(0.9); }
+        to { opacity: 1; transform: translateX(0) scale(1); }
+      }
+      
+      @keyframes dash {
+        to { stroke-dashoffset: 0; }
+      }
+
       @keyframes pulse {
-        0%, 100% {
-          transform: scale(1);
-          opacity: 1;
-        }
-        50% {
-          transform: scale(1.1);
-          opacity: 0.7;
-        }
+        0%, 100% { transform: scale(1); opacity: 0.6; }
+        50% { transform: scale(1.2); opacity: 0.2; }
       }
 
-      @keyframes nodePulse {
-        0%, 100% {
-          r: 6;
-          opacity: 0.8;
-        }
-        50% {
-          r: 10;
-          opacity: 0.3;
-        }
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
       }
 
-      @keyframes lineGrow {
-        from {
-          stroke-dashoffset: 1000;
-        }
-        to {
-          stroke-dashoffset: 0;
-        }
+      @keyframes shimmer {
+        0% { background-position: -200% 0; }
+        100% { background-position: 200% 0; }
       }
-
+      
       .card {
-        animation: fadeInUp 0.6s ease-out forwards;
+        animation: flyIn 0.7s ease-out forwards;
         opacity: 0;
       }
-      
-      .card:nth-child(1) { animation-delay: 0.2s; }
-      .card:nth-child(2) { animation-delay: 0.4s; }
-      .card:nth-child(3) { animation-delay: 0.6s; }
+      .card:nth-child(1) { animation-delay: 0.4s; }
+      .card:nth-child(2) { animation-delay: 0.7s; }
+      .card:nth-child(3) { animation-delay: 1.0s; }
 
-      .node-pulse {
-        animation: nodePulse 2s ease-in-out infinite;
+      .card-left {
+        animation: flyInLeft 0.7s ease-out forwards;
+        opacity: 0;
+      }
+      .card-left:nth-child(1) { animation-delay: 0.5s; }
+
+      .card-right {
+        animation: flyInRight 0.7s ease-out forwards;
+        opacity: 0;
+      }
+      .card-right:nth-child(1) { animation-delay: 0.8s; }
+      .card-right:nth-child(2) { animation-delay: 1.1s; }
+      
+      .road {
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        animation: dash 2.5s ease-out forwards;
+        animation-delay: 0.3s;
       }
 
-      .node-pulse:nth-child(2) { animation-delay: 0.3s; }
-      .node-pulse:nth-child(3) { animation-delay: 0.6s; }
-
-      .timeline-line {
-        stroke-dasharray: 1000;
-        stroke-dashoffset: 1000;
-        animation: lineGrow 1.5s ease-out forwards;
+      .road-glow {
+        stroke-dasharray: 1200;
+        stroke-dashoffset: 1200;
+        animation: dash 2.5s ease-out forwards;
         animation-delay: 0.5s;
       }
 
-      .tag {
-        transition: all 0.3s ease;
+      .pulse-ring {
+        animation: pulse 2s ease-in-out infinite;
       }
-      
-      .tag:hover {
-        transform: translateY(-2px);
-        filter: brightness(1.2);
+
+      .float-item {
+        animation: float 3s ease-in-out infinite;
+      }
+
+      .float-item:nth-child(2) { animation-delay: 0.5s; }
+      .float-item:nth-child(3) { animation-delay: 1s; }
+
+      .shimmer-text {
+        background: linear-gradient(90deg, #FF6B6B, #A78BFA, #4ECDC4, #FF6B6B);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 4s linear infinite;
       }
     </style>
   </defs>
 
   <!-- Fondo -->
-  <rect width="900" height="1200" fill="url(#bgGrad)" rx="20"/>
+  <rect width="1100" height="900" fill="url(#bgGrad)" rx="20"/>
   
-  <!-- Patrón de fondo sutil -->
+  <!-- Patrón de fondo: puntos de mapa -->
   <g opacity="0.03">
-    <circle cx="100" cy="100" r="50" fill="white"/>
-    <circle cx="800" cy="200" r="70" fill="white"/>
-    <circle cx="50" cy="600" r="40" fill="white"/>
-    <circle cx="850" cy="900" r="60" fill="white"/>
+    <circle cx="100" cy="100" r="2" fill="white"/>
+    <circle cx="300" cy="50" r="1.5" fill="white"/>
+    <circle cx="500" cy="150" r="2" fill="white"/>
+    <circle cx="700" cy="80" r="1.5" fill="white"/>
+    <circle cx="900" cy="200" r="2" fill="white"/>
+    <circle cx="200" cy="300" r="1.5" fill="white"/>
+    <circle cx="800" cy="400" r="2" fill="white"/>
+    <circle cx="400" cy="500" r="1.5" fill="white"/>
+    <circle cx="600" cy="600" r="2" fill="white"/>
+    <circle cx="100" cy="700" r="1.5" fill="white"/>
+    <circle cx="1000" cy="500" r="2" fill="white"/>
+    <circle cx="950" cy="700" r="1.5" fill="white"/>
+    <circle cx="150" cy="850" r="2" fill="white"/>
   </g>
 
   <!-- Título -->
-  <g transform="translate(450, 60)" text-anchor="middle">
-    <text y="0" fill="white" font-size="32" font-weight="700" letter-spacing="2">
-      <tspan fill="url(#nodeGrad1)">✦</tspan> TRAYECTORIA PROFESIONAL
+  <g transform="translate(550, 65)" text-anchor="middle">
+    <text y="0" fill="white" font-size="36" font-weight="700" letter-spacing="3">
+      <tspan fill="url(#pathGrad)">◈</tspan> RUTA PROFESIONAL
     </text>
-    <text y="30" fill="#8888aa" font-size="14" letter-spacing="4">EXPERIENCIA LABORAL</text>
-    <line x1="-150" y1="50" x2="150" y2="50" stroke="url(#nodeGrad2)" stroke-width="1" opacity="0.3"/>
+    <text y="32" fill="#8888aa" font-size="12" letter-spacing="5">MI CAMINO EN EL DESARROLLO</text>
+    <rect x="-150" y="50" width="300" height="2" rx="1" fill="url(#pathGrad)" opacity="0.3"/>
   </g>
 
-  <!-- Línea central de tiempo -->
-  <line x1="450" y1="130" x2="450" y2="1100" stroke="url(#lineGrad)" stroke-width="3" class="timeline-line"/>
+  <!-- Línea de ruta con glow -->
+  <path class="road-glow" d="M 100 750 
+    Q 250 750, 350 580 
+    Q 450 410, 550 410 
+    Q 650 410, 750 280 
+    Q 850 150, 950 150" 
+    fill="none" stroke="url(#pathGrad)" stroke-width="12" opacity="0.1"/>
+
+  <!-- Línea de ruta principal -->
+  <path class="road" d="M 100 750 
+    Q 250 750, 350 580 
+    Q 450 410, 550 410 
+    Q 650 410, 750 280 
+    Q 850 150, 950 150" 
+    fill="none" stroke="url(#pathGrad)" stroke-width="3" opacity="0.8"/>
+
+  <!-- Puntos de ruta con efectos -->
+  <!-- Origen -->
+  <g transform="translate(100, 750)">
+    <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="4" fill="#FF6B6B" class="pulse-ring"/>
+    <text y="25" fill="#8888aa" font-size="9" text-anchor="middle" letter-spacing="1">INICIO</text>
+  </g>
+
+  <!-- Waypoint 1 -->
+  <g transform="translate(350, 580)">
+    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2.5" filter="url(#glowStrong)"/>
+    <circle cx="0" cy="0" r="5" fill="#FF6B6B" class="pulse-ring"/>
+    <text y="-20" fill="#FF6B6B" font-size="9" font-weight="700" text-anchor="middle">◆ 2025</text>
+    <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Junio</text>
+  </g>
+
+  <!-- Waypoint 2 -->
+  <g transform="translate(550, 410)">
+    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#4ECDC4" stroke-width="2.5" filter="url(#glowStrong)"/>
+    <circle cx="0" cy="0" r="5" fill="#4ECDC4" class="pulse-ring"/>
+    <text y="-20" fill="#4ECDC4" font-size="9" font-weight="700" text-anchor="middle">◆ 2025</text>
+    <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Octubre</text>
+  </g>
+
+  <!-- Waypoint 3 -->
+  <g transform="translate(750, 280)">
+    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2.5" filter="url(#glowStrong)"/>
+    <circle cx="0" cy="0" r="5" fill="#A78BFA" class="pulse-ring"/>
+    <text y="-20" fill="#A78BFA" font-size="9" font-weight="700" text-anchor="middle">◆ 2024</text>
+    <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Abril</text>
+  </g>
+
+  <!-- Destino -->
+  <g transform="translate(950, 150)">
+    <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="4" fill="#A78BFA" class="pulse-ring"/>
+    <text y="25" fill="#8888aa" font-size="9" text-anchor="middle" letter-spacing="1">ACTUAL</text>
+  </g>
 
   <!-- Experiencia 1: Data AI Quality Analyst -->
-  <g transform="translate(0, 170)">
-    <!-- Círculo en la línea -->
-    <circle cx="450" cy="0" r="12" fill="#1a1a2e" stroke="url(#nodeGrad1)" stroke-width="3" filter="url(#glow)"/>
-    <circle cx="450" cy="0" r="6" fill="url(#nodeGrad1)" class="node-pulse"/>
-    
-    <!-- Card -->
-    <g transform="translate(520, -30)" filter="url(#cardShadow)" class="card">
-      <rect x="0" y="0" width="340" height="200" rx="12" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+  <g class="card-left">
+    <g transform="translate(130, 510)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+      <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card1Grad)"/>
       
-      <!-- Header -->
-      <rect x="0" y="0" width="340" height="50" rx="12" fill="url(#nodeGrad1)" opacity="0.1"/>
-      <text x="20" y="20" fill="url(#nodeGrad1)" font-size="11" font-weight="600" letter-spacing="1">JUN 2025 - 2026</text>
-      <text x="20" y="42" fill="white" font-size="16" font-weight="700">Data AI Quality Analyst</text>
+      <!-- Barra lateral color -->
+      <rect x="0" y="0" width="6" height="190" rx="3" fill="#FF6B6B"/>
       
-      <!-- Empresa -->
-      <text x="20" y="70" fill="#8888aa" font-size="13">🏢 INTELCIA S.A.S · Bogotá, Colombia</text>
+      <!-- Icono -->
+      <circle cx="30" cy="30" r="18" fill="#FF6B6B" opacity="0.15"/>
+      <text x="30" y="35" fill="#FF6B6B" font-size="16" text-anchor="middle">📊</text>
       
-      <!-- Descripción -->
-      <text x="20" y="96" fill="#ccccdd" font-size="11">
+      <text x="60" y="25" fill="#FF6B6B" font-size="10" font-weight="700" letter-spacing="1">JUN 2025 - 2026</text>
+      <text x="60" y="48" fill="white" font-size="16" font-weight="700">Data AI Quality Analyst</text>
+      <text x="60" y="70" fill="#8888aa" font-size="11">INTELCIA S.A.S · Bogotá, Colombia</text>
+      
+      <text x="20" y="98" fill="#ccccdd" font-size="10.5">
         <tspan x="20" dy="0">Validación de datos generados por sistemas de IA en</tspan>
         <tspan x="20" dy="16">plataformas e-commerce de alto tráfico (Miravia,</tspan>
-        <tspan x="20" dy="16">AliExpress), procesando miles de interacciones diarias.</tspan>
+        <tspan x="20" dy="16">AliExpress), procesando miles de interacciones.</tspan>
       </text>
       
       <!-- Tags -->
       <g transform="translate(20, 160)">
-        <rect x="0" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.2" class="tag"/>
+        <rect x="0" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
         <text x="27" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">Python</text>
         
-        <rect x="62" y="0" width="50" height="22" rx="6" fill="#FF8E53" opacity="0.2" class="tag"/>
+        <rect x="62" y="0" width="50" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
         <text x="87" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">Excel</text>
         
-        <rect x="119" y="0" width="60" height="22" rx="6" fill="#4ECDC4" opacity="0.2" class="tag"/>
+        <rect x="119" y="0" width="60" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
         <text x="149" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">PowerBI</text>
         
-        <rect x="186" y="0" width="75" height="22" rx="6" fill="#A78BFA" opacity="0.2" class="tag"/>
+        <rect x="186" y="0" width="75" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
         <text x="223" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">PowerAutomate</text>
       </g>
     </g>
   </g>
 
-  <!-- Experiencia 2: Backend Developer -->
-  <g transform="translate(0, 490)">
-    <!-- Círculo en la línea -->
-    <circle cx="450" cy="0" r="12" fill="#1a1a2e" stroke="url(#nodeGrad2)" stroke-width="3" filter="url(#glow)"/>
-    <circle cx="450" cy="0" r="6" fill="url(#nodeGrad2)" class="node-pulse"/>
-    
-    <!-- Card (izquierda) -->
-    <g transform="translate(-360, -30)" filter="url(#cardShadow)" class="card">
-      <rect x="0" y="0" width="340" height="200" rx="12" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+  <!-- Experiencia 2: Backend Developer Jr -->
+  <g class="card-right">
+    <g transform="translate(580, 310)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+      <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card2Grad)"/>
       
-      <rect x="0" y="0" width="340" height="50" rx="12" fill="url(#nodeGrad2)" opacity="0.1"/>
-      <text x="20" y="20" fill="#4ECDC4" font-size="11" font-weight="600" letter-spacing="1">OCT 2025 - ABR 2026</text>
-      <text x="20" y="42" fill="white" font-size="16" font-weight="700">Backend Developer Jr (Prácticas)</text>
+      <rect x="0" y="0" width="6" height="190" rx="3" fill="#4ECDC4"/>
       
-      <text x="20" y="70" fill="#8888aa" font-size="13">🏢 Koop Technology</text>
+      <circle cx="30" cy="30" r="18" fill="#4ECDC4" opacity="0.15"/>
+      <text x="30" y="35" fill="#4ECDC4" font-size="16" text-anchor="middle">⚡</text>
       
-      <text x="20" y="96" fill="#ccccdd" font-size="11">
-        <tspan x="20" dy="0">Desarrollo y mantenimiento de APIs REST en producción</tspan>
-        <tspan x="20" dy="16">con FastAPI, integradas a un frontend en React.</tspan>
-        <tspan x="20" dy="16">Participación activa en PRs y ceremonias ágiles.</tspan>
+      <text x="60" y="25" fill="#4ECDC4" font-size="10" font-weight="700" letter-spacing="1">OCT 2025 - ABR 2026</text>
+      <text x="60" y="48" fill="white" font-size="16" font-weight="700">Backend Developer Jr</text>
+      <text x="60" y="70" fill="#8888aa" font-size="11">Koop Technology · Prácticas</text>
+      
+      <text x="20" y="98" fill="#ccccdd" font-size="10.5">
+        <tspan x="20" dy="0">Desarrollo y mantenimiento de APIs REST en</tspan>
+        <tspan x="20" dy="16">producción con FastAPI, integradas a un</tspan>
+        <tspan x="20" dy="16">frontend en React. Participación en PRs.</tspan>
       </text>
       
       <g transform="translate(20, 160)">
-        <rect x="0" y="0" width="55" height="22" rx="6" fill="#4ECDC4" opacity="0.2" class="tag"/>
+        <rect x="0" y="0" width="55" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
         <text x="27" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">Python</text>
         
-        <rect x="62" y="0" width="60" height="22" rx="6" fill="#FF8E53" opacity="0.2" class="tag"/>
+        <rect x="62" y="0" width="60" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
         <text x="92" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">FastAPI</text>
         
-        <rect x="129" y="0" width="45" height="22" rx="6" fill="#FF6B6B" opacity="0.2" class="tag"/>
+        <rect x="129" y="0" width="45" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
         <text x="151" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">SQL</text>
         
-        <rect x="181" y="0" width="50" height="22" rx="6" fill="#A78BFA" opacity="0.2" class="tag"/>
+        <rect x="181" y="0" width="50" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
         <text x="206" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">React</text>
         
-        <rect x="238" y="0" width="40" height="22" rx="6" fill="#4ECDC4" opacity="0.2" class="tag"/>
+        <rect x="238" y="0" width="40" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
         <text x="258" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">Git</text>
       </g>
     </g>
   </g>
 
   <!-- Experiencia 3: Full Stack Developer -->
-  <g transform="translate(0, 810)">
-    <!-- Círculo en la línea -->
-    <circle cx="450" cy="0" r="12" fill="#1a1a2e" stroke="url(#nodeGrad3)" stroke-width="3" filter="url(#glow)"/>
-    <circle cx="450" cy="0" r="6" fill="url(#nodeGrad3)" class="node-pulse"/>
-    
-    <!-- Card -->
-    <g transform="translate(520, -40)" filter="url(#cardShadow)" class="card">
-      <rect x="0" y="0" width="340" height="220" rx="12" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+  <g class="card-right">
+    <g transform="translate(780, 120)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+      <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card3Grad)"/>
       
-      <rect x="0" y="0" width="340" height="50" rx="12" fill="url(#nodeGrad3)" opacity="0.1"/>
-      <text x="20" y="20" fill="#A78BFA" font-size="11" font-weight="600" letter-spacing="1">ABR 2024 - JUL 2025</text>
-      <text x="20" y="42" fill="white" font-size="16" font-weight="700">Full Stack Developer (Freelance)</text>
+      <rect x="0" y="0" width="6" height="190" rx="3" fill="#A78BFA"/>
       
-      <text x="20" y="70" fill="#8888aa" font-size="13">🚀 Proyecto BarberB — Tecnoparque</text>
+      <circle cx="30" cy="30" r="18" fill="#A78BFA" opacity="0.15"/>
+      <text x="30" y="35" fill="#A78BFA" font-size="16" text-anchor="middle">💎</text>
       
-      <text x="20" y="96" fill="#ccccdd" font-size="11">
+      <text x="60" y="25" fill="#A78BFA" font-size="10" font-weight="700" letter-spacing="1">ABR 2024 - JUL 2025</text>
+      <text x="60" y="48" fill="white" font-size="16" font-weight="700">Full Stack Developer</text>
+      <text x="60" y="70" fill="#8888aa" font-size="11">BarberB — Tecnoparque · Freelance</text>
+      
+      <text x="20" y="98" fill="#ccccdd" font-size="10.5">
         <tspan x="20" dy="0">Diseño e implementación de un ERP modular para</tspan>
         <tspan x="20" dy="16">barberías y PYMEs, desde la arquitectura hasta</tspan>
         <tspan x="20" dy="16">el despliegue en producción en GCP.</tspan>
       </text>
       
-      <g transform="translate(20, 170)">
-        <rect x="0" y="0" width="55" height="22" rx="6" fill="#A78BFA" opacity="0.2" class="tag"/>
+      <g transform="translate(20, 160)">
+        <rect x="0" y="0" width="55" height="22" rx="6" fill="#A78BFA" opacity="0.15"/>
         <text x="27" y="15" fill="#A78BFA" font-size="9" text-anchor="middle" font-weight="600">Python</text>
         
-        <rect x="62" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.2" class="tag"/>
+        <rect x="62" y="0" width="55" height="22" rx="6" fill="#FF6B6B" opacity="0.15"/>
         <text x="89" y="15" fill="#FF6B6B" font-size="9" text-anchor="middle" font-weight="600">Django</text>
         
-        <rect x="124" y="0" width="50" height="22" rx="6" fill="#4ECDC4" opacity="0.2" class="tag"/>
+        <rect x="124" y="0" width="50" height="22" rx="6" fill="#4ECDC4" opacity="0.15"/>
         <text x="149" y="15" fill="#4ECDC4" font-size="9" text-anchor="middle" font-weight="600">MySQL</text>
         
-        <rect x="181" y="0" width="40" height="22" rx="6" fill="#FF8E53" opacity="0.2" class="tag"/>
+        <rect x="181" y="0" width="40" height="22" rx="6" fill="#FF8E53" opacity="0.15"/>
         <text x="201" y="15" fill="#FF8E53" font-size="9" text-anchor="middle" font-weight="600">GCP</text>
       </g>
     </g>
   </g>
 
-  <!-- Indicador de scroll/flujo -->
-  <g transform="translate(450, 1130)" opacity="0.3">
-    <circle cx="0" cy="0" r="4" fill="#6C63FF"/>
-    <line x1="0" y1="4" x2="0" y2="20" stroke="#6C63FF" stroke-width="1"/>
-    <polygon points="-3,18 3,18 0,24" fill="#6C63FF"/>
+  <!-- Conectores visuales entre tarjetas y ruta -->
+  <g opacity="0.15">
+    <line x1="350" y1="580" x2="430" y2="580" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="550" y1="410" x2="580" y2="410" stroke="#4ECDC4" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="750" y1="280" x2="780" y2="280" stroke="#A78BFA" stroke-width="1" stroke-dasharray="4,4"/>
   </g>
 
-  <!-- Badge de año -->
-  <g transform="translate(50, 1150)">
-    <text fill="#444466" font-size="10" letter-spacing="1">2024 — 2026</text>
+  <!-- Footer -->
+  <g transform="translate(550, 860)" text-anchor="middle">
+    <text fill="#444466" font-size="10" letter-spacing="3">✦ 2024 — 2026 · TRAYECTORIA EN EVOLUCIÓN ✦</text>
+    <rect x="-200" y="10" width="400" height="1" rx="0.5" fill="#444466" opacity="0.2"/>
   </g>
 
-  <!-- Versión -->
-  <g transform="translate(800, 1150)">
-    <text fill="#444466" font-size="9" text-anchor="end">✦ v2.0</text>
+  <!-- Etiqueta de versión -->
+  <g transform="translate(1050, 870)">
+    <text fill="#333355" font-size="8" text-anchor="end" letter-spacing="1">v3.0</text>
   </g>
 </svg>
