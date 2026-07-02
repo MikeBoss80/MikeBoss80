@@ -43,7 +43,7 @@
     </text>
 
     <!-- ===== COMANDO SE ESCRIBE LETRA POR LETRA ===== -->
-    <text x="174" y="80" fill="#ffffff">
+    <text x="180" y="80" fill="#ffffff">
       <!-- Letra "c" -->
       <tspan opacity="0">c<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="0.5s" fill="freeze"/></tspan>
       <!-- Letra "d" -->
@@ -89,7 +89,7 @@
       <text x="32" y="172">
         <tspan fill="#50fa7b">-</tspan>
         <tspan fill="#f8f8f2" dx="20">Excel Analytics con IA y Python</tspan>
-        <tspan fill="#6272a4" dx="175" font-size="12">Platzi · Abr 2026</tspan>
+        <tspan fill="#6272a4" dx="210" font-size="12">Platzi · Abr 2026</tspan>
       </text>
       
       <text x="32" y="196">
@@ -101,25 +101,25 @@
       <text x="32" y="220">
         <tspan fill="#50fa7b">-</tspan>
         <tspan fill="#f8f8f2" dx="20">Power BI + Inteligencia Artificial</tspan>
-        <tspan fill="#6272a4" dx="171" font-size="12">Daxus · Ene 2026</tspan>
+        <tspan fill="#6272a4" dx="187" font-size="12">Daxus · Ene 2026</tspan>
       </text>
       
       <text x="32" y="244">
         <tspan fill="#50fa7b">-</tspan>
         <tspan fill="#f8f8f2" dx="20">Foundational C# with Microsoft</tspan>
-        <tspan fill="#6272a4" dx="173" font-size="12">freeCodeCamp · Abr 2026</tspan>
+        <tspan fill="#6272a4" dx="218" font-size="12">freeCodeCamp · Abr 2026</tspan>
       </text>
       
       <text x="32" y="268">
         <tspan fill="#50fa7b">-</tspan>
         <tspan fill="#f8f8f2" dx="20">Fundamentos de .NET</tspan>
-        <tspan fill="#6272a4" dx="233" font-size="12">Platzi · Jul 2025</tspan>
+        <tspan fill="#6272a4" dx="305" font-size="12">Platzi · Jul 2025</tspan>
       </text>
       
       <text x="32" y="292">
         <tspan fill="#50fa7b">-</tspan>
         <tspan fill="#f8f8f2" dx="20">Administrador de Bases de Datos Relacionales</tspan>
-        <tspan fill="#6272a4" dx="78" font-size="12">CarlosSlim · Ago 2024</tspan>
+        <tspan fill="#6272a4" dx="107" font-size="12">CarlosSlim · Ago 2024</tspan>
       </text>
       
       <text x="32" y="316" fill="#6272a4" font-size="12">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</text>
@@ -134,7 +134,7 @@
       </text>
       
       <!-- Cursor parpadeante -->
-      <rect x="170" y="331" width="8" height="16" fill="#ffffff">
+      <rect x="175" y="331" width="8" height="16" fill="#ffffff">
         <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" begin="2.5s"/>
       </rect>
     </g>
