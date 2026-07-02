@@ -8,43 +8,43 @@ const PROJECTS = [
     title: "Proyecto 1",
     desc: "Descripción breve de tu primer proyecto.",
     img: "images/proyecto1.png",
-    link: "https://github.com/tu-usuario/proyecto1"
+    link: "https://github.com/MikeBoss80/proyecto1"
   },
   {
     title: "Proyecto 2",
     desc: "Otro proyecto increíble que quieres mostrar.",
     img: "images/proyecto2.png",
-    link: "https://github.com/tu-usuario/proyecto2"
+    link: "https://github.com/MikeBoss80/proyecto2"
   },
   {
     title: "Proyecto 3",
     desc: "Una app web con diseño moderno.",
     img: "images/proyecto3.png",
-    link: "https://github.com/tu-usuario/proyecto3"
+    link: "https://github.com/MikeBoss80/proyecto3"
   },
   {
     title: "Proyecto 4",
     desc: "Librería open-source en JavaScript.",
     img: "images/proyecto4.png",
-    link: "https://github.com/tu-usuario/proyecto4"
+    link: "https://github.com/MikeBoss80/proyecto4"
   },
   {
     title: "Proyecto 5",
     desc: "Dashboard con analíticas en tiempo real.",
     img: "images/proyecto5.png",
-    link: "https://github.com/tu-usuario/proyecto5"
+    link: "https://github.com/MikeBoss80/proyecto5"
   },
   {
     title: "Proyecto 6",
     desc: "API REST con Node.js y MongoDB.",
     img: "images/proyecto6.png",
-    link: "https://github.com/tu-usuario/proyecto6"
+    link: "https://github.com/MikeBoss80/proyecto6"
   },
   {
     title: "Proyecto 7",
     desc: "Juego 2D hecho con Canvas.",
     img: "images/proyecto7.png",
-    link: "https://github.com/tu-usuario/proyecto7"
+    link: "https://github.com/MikeBoss80/proyecto7"
   }
 ];
 
