@@ -1,2 +1,54 @@
-<br>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Proyectos · Cover Flow 3D</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stage">
+    <!-- Luces de fondo estilo Apple -->
+    <div class="light light-1"></div>
+    <div class="light light-2"></div>
+    <div class="light light-3"></div>
 
+    <header class="hero">
+      <h1>Mis Proyectos</h1>
+      <p>Arrastra, usa las flechas o deja que gire solo ✨</p>
+    </header>
+
+    <!-- Escenario 3D -->
+    <div class="carousel" id="carousel">
+      <div class="carousel__track" id="track">
+        <!-- Las tarjetas se generan desde script.js -->
+      </div>
+
+      <!-- Reflejo -->
+      <div class="carousel__reflection" id="reflection"></div>
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+      <button class="btn btn--prev" id="prev" aria-label="Anterior">
+        <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+
+      <div class="dots" id="dots"></div>
+
+      <button class="btn btn--next" id="next" aria-label="Siguiente">
+        <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+      </button>
+    </div>
+
+    <!-- Info del proyecto activo -->
+    <div class="info" id="info">
+      <h2 id="infoTitle">—</h2>
+      <p id="infoDesc">—</p>
+      <a id="infoLink" href="#" target="_blank" rel="noopener">Ver en GitHub →</a>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
