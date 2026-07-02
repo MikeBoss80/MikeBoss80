@@ -154,9 +154,7 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 </table>
 
 
-<p align="center">
-  <img src="./assets/console/terminal.svg" alt="Terminal animada" width="700">
-</p>
+
 
 <br>
 
@@ -229,16 +227,9 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 ## 🎓 Certificaciones
 
 <div align="center">
-
-| Certificación | Institución | Fecha |
-|---|---|---|
-| Excel Analytics con IA y Python | Platzi | Abr 2026 |
-| Business Intelligence: Utilidad y Áreas de Oportunidad | Platzi | Abr 2026 |
-| Power BI + Inteligencia Artificial | Daxus Latam | Ene 2026 |
-| Foundational C# with Microsoft | freeCodeCamp | Abr 2026 |
-| Fundamentos de .NET | Platzi | Jul 2025 |
-| Administrador de Bases de Datos Relacionales | CarlosSlim | Ago 2024 |
-
+<p align="center">
+  <img src="./assets/console/terminal.svg" alt="Terminal animada" width="700">
+</p>
 </div>
 
 <br>
@@ -248,10 +239,12 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 <div align="center">
 
 ### 🌍 Idiomas
+
 ![Español](https://img.shields.io/badge/Español-Nativo-2496ED?style=for-the-badge&labelColor=000000)
 ![Inglés](https://img.shields.io/badge/Inglés-Avanzado-00D4FF?style=for-the-badge&labelColor=000000)
 
 ### 💪 Soft Skills
+
 ![Liderazgo](https://img.shields.io/badge/-Liderazgo_Técnico-2496ED?style=for-the-badge&labelColor=000000)
 ![Equipo](https://img.shields.io/badge/-Trabajo_en_Equipo-00D4FF?style=for-the-badge&labelColor=000000)
 ![Comunicación](https://img.shields.io/badge/-Comunicación_Efectiva-8B5CF6?style=for-the-badge&labelColor=000000)
@@ -262,6 +255,7 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 
 <br>
+
 ## 🤝 Colaboración
 
 <div align="center">
@@ -281,6 +275,7 @@ Interesado en proyectos relacionados con:
 </div>
 
 <br>
+
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=125&section=footer&text=Let's%20Build%20Something%20Amazing&fontSize=28&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Powered%20by%20Code%20%26%20Coffee%20☕&descAlignY=60&descSize=16" />
 </div>
