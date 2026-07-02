@@ -43,7 +43,7 @@
     </text>
 
     <!-- ===== COMANDO SE ESCRIBE LETRA POR LETRA ===== -->
-    <text x="155" y="80" fill="#ffffff">
+    <text x="174" y="80" fill="#ffffff">
       <!-- Letra "c" -->
       <tspan opacity="0">c<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="0.5s" fill="freeze"/></tspan>
       <!-- Letra "d" -->
@@ -134,7 +134,7 @@
       </text>
       
       <!-- Cursor parpadeante -->
-      <rect x="155" y="331" width="8" height="16" fill="#ffffff">
+      <rect x="170" y="331" width="8" height="16" fill="#ffffff">
         <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" begin="2.5s"/>
       </rect>
     </g>
