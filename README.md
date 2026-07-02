@@ -23,6 +23,7 @@
 </div>
 
 <br>
+
 ## 🧠 Perfil profesional
 
 <div align="center">
