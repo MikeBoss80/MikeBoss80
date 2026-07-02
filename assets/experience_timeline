@@ -39,6 +39,38 @@
     <filter id="cardShadow">
       <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#6C63FF" flood-opacity="0.15"/>
     </filter>
+
+    <!-- Animaciones -->
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes pulse {
+        0%, 100% { r: 5; opacity: 0.8; }
+        50% { r: 8; opacity: 0.3; }
+      }
+      @keyframes drawLine {
+        from { stroke-dashoffset: 1000; }
+        to { stroke-dashoffset: 0; }
+      }
+      
+      .card { animation: fadeIn 0.8s ease-out forwards; opacity: 0; }
+      .card:nth-child(1) { animation-delay: 0.3s; }
+      .card:nth-child(2) { animation-delay: 0.6s; }
+      .card:nth-child(3) { animation-delay: 0.9s; }
+      
+      .pulse { animation: pulse 2s ease-in-out infinite; }
+      .pulse:nth-child(2) { animation-delay: 0.5s; }
+      .pulse:nth-child(3) { animation-delay: 1s; }
+      
+      .path-line {
+        stroke-dasharray: 1000;
+        stroke-dashoffset: 1000;
+        animation: drawLine 2s ease-out forwards;
+        animation-delay: 0.5s;
+      }
+    </style>
   </defs>
 
   <!-- Fondo -->
@@ -62,84 +94,84 @@
   </g>
 
   <!-- Título -->
-  <g transform="translate(550, 65)" text-anchor="middle">
-    <text y="0" fill="white" font-size="36" font-weight="700" letter-spacing="3">
+  <g transform="translate(550, 60)" text-anchor="middle">
+    <text y="0" fill="white" font-size="34" font-weight="700" letter-spacing="3">
       <tspan fill="url(#pathGrad)">◈</tspan> RUTA PROFESIONAL
     </text>
-    <text y="32" fill="#8888aa" font-size="12" letter-spacing="5">MI CAMINO EN EL DESARROLLO</text>
+    <text y="30" fill="#8888aa" font-size="12" letter-spacing="5">MI CAMINO EN EL DESARROLLO</text>
     <rect x="-150" y="50" width="300" height="2" rx="1" fill="url(#pathGrad)" opacity="0.3"/>
   </g>
 
-  <!-- Línea de ruta con glow -->
-  <path d="M 100 750 
-    Q 250 750, 350 580 
-    Q 450 410, 550 410 
-    Q 650 410, 750 280 
-    Q 850 150, 950 150" 
-    fill="none" stroke="url(#pathGrad)" stroke-width="12" opacity="0.1"/>
-
-  <!-- Línea de ruta principal -->
-  <path d="M 100 750 
-    Q 250 750, 350 580 
-    Q 450 410, 550 410 
-    Q 650 410, 750 280 
-    Q 850 150, 950 150" 
+  <!-- Línea de ruta -->
+  <path class="path-line" d="M 80 780 
+    Q 220 780, 320 610 
+    Q 420 440, 520 440 
+    Q 620 440, 720 310 
+    Q 820 180, 920 180" 
     fill="none" stroke="url(#pathGrad)" stroke-width="3" opacity="0.8"/>
+
+  <!-- Glow de la ruta -->
+  <path d="M 80 780 
+    Q 220 780, 320 610 
+    Q 420 440, 520 440 
+    Q 620 440, 720 310 
+    Q 820 180, 920 180" 
+    fill="none" stroke="url(#pathGrad)" stroke-width="10" opacity="0.1"/>
 
   <!-- Puntos de ruta -->
   <!-- Origen -->
-  <g transform="translate(100, 750)">
-    <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="4" fill="#FF6B6B"/>
+  <g transform="translate(80, 780)">
+    <circle cx="0" cy="0" r="8" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="4" fill="#FF6B6B" class="pulse"/>
     <text y="25" fill="#8888aa" font-size="9" text-anchor="middle" letter-spacing="1">INICIO</text>
   </g>
 
   <!-- Waypoint 1 -->
-  <g transform="translate(350, 580)">
-    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2.5" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="5" fill="#FF6B6B"/>
-    <text y="-20" fill="#FF6B6B" font-size="9" font-weight="700" text-anchor="middle">◆ 2025</text>
-    <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Junio</text>
+  <g transform="translate(320, 610)">
+    <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#FF6B6B" stroke-width="2.5" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="5" fill="#FF6B6B" class="pulse"/>
+    <text y="-18" fill="#FF6B6B" font-size="9" font-weight="700" text-anchor="middle">◆ 2025</text>
+    <text y="22" fill="#8888aa" font-size="8" text-anchor="middle">Junio</text>
   </g>
 
   <!-- Waypoint 2 -->
-  <g transform="translate(550, 410)">
-    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#4ECDC4" stroke-width="2.5" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="5" fill="#4ECDC4"/>
-    <text y="-20" fill="#4ECDC4" font-size="9" font-weight="700" text-anchor="middle">◆ 2025</text>
-    <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Octubre</text>
+  <g transform="translate(520, 440)">
+    <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#4ECDC4" stroke-width="2.5" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="5" fill="#4ECDC4" class="pulse"/>
+    <text y="-18" fill="#4ECDC4" font-size="9" font-weight="700" text-anchor="middle">◆ 2025</text>
+    <text y="22" fill="#8888aa" font-size="8" text-anchor="middle">Octubre</text>
   </g>
 
   <!-- Waypoint 3 -->
-  <g transform="translate(750, 280)">
-    <circle cx="0" cy="0" r="12" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2.5" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="5" fill="#A78BFA"/>
-    <text y="-20" fill="#A78BFA" font-size="9" font-weight="700" text-anchor="middle">◆ 2024</text>
-    <text y="25" fill="#8888aa" font-size="8" text-anchor="middle">Abril</text>
+  <g transform="translate(720, 310)">
+    <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2.5" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="5" fill="#A78BFA" class="pulse"/>
+    <text y="-18" fill="#A78BFA" font-size="9" font-weight="700" text-anchor="middle">◆ 2024</text>
+    <text y="22" fill="#8888aa" font-size="8" text-anchor="middle">Abril</text>
   </g>
 
   <!-- Destino -->
-  <g transform="translate(950, 150)">
-    <circle cx="0" cy="0" r="10" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2" filter="url(#glow)"/>
-    <circle cx="0" cy="0" r="4" fill="#A78BFA"/>
+  <g transform="translate(920, 180)">
+    <circle cx="0" cy="0" r="8" fill="#1a1a2e" stroke="#A78BFA" stroke-width="2" filter="url(#glow)"/>
+    <circle cx="0" cy="0" r="4" fill="#A78BFA" class="pulse"/>
     <text y="25" fill="#8888aa" font-size="9" text-anchor="middle" letter-spacing="1">ACTUAL</text>
   </g>
 
   <!-- Experiencia 1: Data AI Quality Analyst -->
-  <g transform="translate(130, 510)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
-    <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card1Grad)"/>
+  <g class="card" transform="translate(110, 520)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="320" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+    <rect x="0" y="0" width="320" height="190" rx="14" fill="url(#card1Grad)"/>
     
     <rect x="0" y="0" width="6" height="190" rx="3" fill="#FF6B6B"/>
     
-    <circle cx="30" cy="30" r="18" fill="#FF6B6B" opacity="0.15"/>
-    <text x="30" y="35" fill="#FF6B6B" font-size="16" text-anchor="middle">📊</text>
+    <circle cx="28" cy="28" r="18" fill="#FF6B6B" opacity="0.15"/>
+    <text x="28" y="33" fill="#FF6B6B" font-size="16" text-anchor="middle">📊</text>
     
-    <text x="60" y="25" fill="#FF6B6B" font-size="10" font-weight="700" letter-spacing="1">JUN 2025 - 2026</text>
-    <text x="60" y="48" fill="white" font-size="16" font-weight="700">Data AI Quality Analyst</text>
-    <text x="60" y="70" fill="#8888aa" font-size="11">INTELCIA S.A.S · Bogotá, Colombia</text>
+    <text x="58" y="24" fill="#FF6B6B" font-size="10" font-weight="700" letter-spacing="1">JUN 2025 - 2026</text>
+    <text x="58" y="46" fill="white" font-size="15" font-weight="700">Data AI Quality Analyst</text>
+    <text x="58" y="68" fill="#8888aa" font-size="11">INTELCIA S.A.S · Bogotá</text>
     
-    <text x="20" y="98" fill="#ccccdd" font-size="10.5">
+    <text x="20" y="96" fill="#ccccdd" font-size="10.5">
       <tspan x="20" dy="0">Validación de datos generados por sistemas de IA en</tspan>
       <tspan x="20" dy="16">plataformas e-commerce de alto tráfico (Miravia,</tspan>
       <tspan x="20" dy="16">AliExpress), procesando miles de interacciones.</tspan>
@@ -161,23 +193,23 @@
   </g>
 
   <!-- Experiencia 2: Backend Developer Jr -->
-  <g transform="translate(580, 310)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
-    <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card2Grad)"/>
+  <g class="card" transform="translate(560, 320)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="320" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+    <rect x="0" y="0" width="320" height="190" rx="14" fill="url(#card2Grad)"/>
     
     <rect x="0" y="0" width="6" height="190" rx="3" fill="#4ECDC4"/>
     
-    <circle cx="30" cy="30" r="18" fill="#4ECDC4" opacity="0.15"/>
-    <text x="30" y="35" fill="#4ECDC4" font-size="16" text-anchor="middle">⚡</text>
+    <circle cx="28" cy="28" r="18" fill="#4ECDC4" opacity="0.15"/>
+    <text x="28" y="33" fill="#4ECDC4" font-size="16" text-anchor="middle">⚡</text>
     
-    <text x="60" y="25" fill="#4ECDC4" font-size="10" font-weight="700" letter-spacing="1">OCT 2025 - ABR 2026</text>
-    <text x="60" y="48" fill="white" font-size="16" font-weight="700">Backend Developer Jr</text>
-    <text x="60" y="70" fill="#8888aa" font-size="11">Koop Technology · Prácticas</text>
+    <text x="58" y="24" fill="#4ECDC4" font-size="10" font-weight="700" letter-spacing="1">OCT 2025 - ABR 2026</text>
+    <text x="58" y="46" fill="white" font-size="15" font-weight="700">Backend Developer Jr</text>
+    <text x="58" y="68" fill="#8888aa" font-size="11">Koop Technology · Prácticas</text>
     
-    <text x="20" y="98" fill="#ccccdd" font-size="10.5">
+    <text x="20" y="96" fill="#ccccdd" font-size="10.5">
       <tspan x="20" dy="0">Desarrollo y mantenimiento de APIs REST en</tspan>
       <tspan x="20" dy="16">producción con FastAPI, integradas a un</tspan>
-      <tspan x="20" dy="16">frontend en React. Participación en PRs.</tspan>
+      <tspan x="20" dy="16">frontend en React. Participación activa en PRs.</tspan>
     </text>
     
     <g transform="translate(20, 160)">
@@ -199,20 +231,20 @@
   </g>
 
   <!-- Experiencia 3: Full Stack Developer -->
-  <g transform="translate(780, 120)" filter="url(#cardShadow)">
-    <rect x="0" y="0" width="300" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
-    <rect x="0" y="0" width="300" height="190" rx="14" fill="url(#card3Grad)"/>
+  <g class="card" transform="translate(760, 120)" filter="url(#cardShadow)">
+    <rect x="0" y="0" width="320" height="190" rx="14" fill="#1a1a2e" stroke="#2a2a4e" stroke-width="1"/>
+    <rect x="0" y="0" width="320" height="190" rx="14" fill="url(#card3Grad)"/>
     
     <rect x="0" y="0" width="6" height="190" rx="3" fill="#A78BFA"/>
     
-    <circle cx="30" cy="30" r="18" fill="#A78BFA" opacity="0.15"/>
-    <text x="30" y="35" fill="#A78BFA" font-size="16" text-anchor="middle">💎</text>
+    <circle cx="28" cy="28" r="18" fill="#A78BFA" opacity="0.15"/>
+    <text x="28" y="33" fill="#A78BFA" font-size="16" text-anchor="middle">💎</text>
     
-    <text x="60" y="25" fill="#A78BFA" font-size="10" font-weight="700" letter-spacing="1">ABR 2024 - JUL 2025</text>
-    <text x="60" y="48" fill="white" font-size="16" font-weight="700">Full Stack Developer</text>
-    <text x="60" y="70" fill="#8888aa" font-size="11">BarberB — Tecnoparque · Freelance</text>
+    <text x="58" y="24" fill="#A78BFA" font-size="10" font-weight="700" letter-spacing="1">ABR 2024 - JUL 2025</text>
+    <text x="58" y="46" fill="white" font-size="15" font-weight="700">Full Stack Developer</text>
+    <text x="58" y="68" fill="#8888aa" font-size="11">BarberB — Tecnoparque · Freelance</text>
     
-    <text x="20" y="98" fill="#ccccdd" font-size="10.5">
+    <text x="20" y="96" fill="#ccccdd" font-size="10.5">
       <tspan x="20" dy="0">Diseño e implementación de un ERP modular para</tspan>
       <tspan x="20" dy="16">barberías y PYMEs, desde la arquitectura hasta</tspan>
       <tspan x="20" dy="16">el despliegue en producción en GCP.</tspan>
@@ -235,19 +267,14 @@
 
   <!-- Conectores visuales -->
   <g opacity="0.15">
-    <line x1="350" y1="580" x2="430" y2="580" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="4,4"/>
-    <line x1="550" y1="410" x2="580" y2="410" stroke="#4ECDC4" stroke-width="1" stroke-dasharray="4,4"/>
-    <line x1="750" y1="280" x2="780" y2="280" stroke="#A78BFA" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="320" y1="610" x2="430" y2="610" stroke="#FF6B6B" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="520" y1="440" x2="560" y2="440" stroke="#4ECDC4" stroke-width="1" stroke-dasharray="4,4"/>
+    <line x1="720" y1="310" x2="760" y2="310" stroke="#A78BFA" stroke-width="1" stroke-dasharray="4,4"/>
   </g>
 
   <!-- Footer -->
-  <g transform="translate(550, 860)" text-anchor="middle">
+  <g transform="translate(550, 870)" text-anchor="middle">
     <text fill="#444466" font-size="10" letter-spacing="3">✦ 2024 — 2026 · TRAYECTORIA EN EVOLUCIÓN ✦</text>
     <rect x="-200" y="10" width="400" height="1" rx="0.5" fill="#444466" opacity="0.2"/>
-  </g>
-
-  <!-- Etiqueta de versión -->
-  <g transform="translate(1050, 870)">
-    <text fill="#333355" font-size="8" text-anchor="end" letter-spacing="1">v3.0</text>
   </g>
 </svg>
