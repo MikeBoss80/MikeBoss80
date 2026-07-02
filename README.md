@@ -1,6 +1,7 @@
-<p align="center">
-  <img src="./assets/experience_timeline.svg" alt="Ruta Profesional">
-</p>
+<div align="center">
+  <img src="./experience_timeline.svg" alt="Ruta Profesional" width="100%">
+</div>
+
 
 <br>
 
