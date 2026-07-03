@@ -1,84 +1,225 @@
 /* ============================================
-   VARIABLES DE CONFIGURACIÓN
-   Cambia --banner-image para usar tu propia imagen
+   🔧 CONFIGURACIÓN
+   Cambia SOLO --banner-fill para tu imagen
    ============================================ */
 :root {
-  --banner-image: url('docs/banner/banner.png');
-  --glow-color: rgba(36, 150, 237, 0.4);
+  --banner-fill      : url('banner.png');
+  --bg               : #000000;
+  --glow-a           : rgba(240, 147, 251, 0.3);
+  --glow-b           : rgba(79, 172, 254, 0.25);
+  --shine-duration   : 3s;
+  --glow-duration    : 5s;
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; }
+/* ============================================
+   RESET
+   ============================================ */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body { width: 100%; height: 100%; }
 
 body {
-  background: #000;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
+  background     : var(--bg);
+  display        : flex;
+  align-items    : center;
   justify-content: center;
-  overflow: hidden;
-  font-family: 'Anton', sans-serif;
+  overflow       : hidden;
+  font-family    : 'Anton', Impact, 'Arial Black', sans-serif;
 }
 
+/* ============================================
+   BANNER PRINCIPAL
+   ============================================ */
 .banner {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
+  position       : relative;
+  width          : 100%;
+  height         : 100vh;
+  display        : flex;
+  align-items    : center;
   justify-content: center;
 }
 
-.text-container {
-  position: relative;
-  z-index: 10;
+/* ============================================
+   GLOW AMBIENTAL (fondo)
+   ============================================ */
+.banner__glow {
+  position      : absolute;
+  inset         : 0;
+  z-index       : 1;
+  pointer-events: none;
+  background    : radial-gradient(ellipse 55% 40% at 30% 50%, var(--glow-a) 0%, transparent 70%),
+                  radial-gradient(ellipse 45% 35% at 70% 50%, var(--glow-b) 0%, transparent 70%);
+  filter        : blur(70px);
+  animation     : glowDrift var(--glow-duration) ease-in-out infinite alternate;
+}
+
+@keyframes glowDrift {
+  from {
+    background: radial-gradient(ellipse 55% 40% at 20% 50%, var(--glow-a) 0%, transparent 70%),
+                radial-gradient(ellipse 45% 35% at 80% 50%, var(--glow-b) 0%, transparent 70%);
+  }
+  to {
+    background: radial-gradient(ellipse 55% 40% at 80% 50%, var(--glow-a) 0%, transparent 70%),
+                radial-gradient(ellipse 45% 35% at 20% 50%, var(--glow-b) 0%, transparent 70%);
+  }
+}
+
+/* ============================================
+   CONTENIDO
+   ============================================ */
+.banner__content {
+  position  : relative;
+  z-index   : 10;
   text-align: center;
+  width     : 100%;
+  padding   : 0 4vw;
+  animation : fadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
-.hero-text {
-  font-size: clamp(4rem, 15vw, 12rem);
-  line-height: 0.9;
-  text-transform: uppercase;
-  
-  /* IMAGEN DE FONDO */
-  background: var(--banner-image) center/cover no-repeat;
-  
-  /* CLIP DEL TEXTO */
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  
-  /* ANIMACIÓN */
-  animation: imageFloat 20s ease-in-out infinite;
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-.hero-text .line {
+/* ============================================
+   WRAPPER DEL TEXTO (contenedor de las 2 capas)
+   ============================================ */
+.banner__headline-wrapper {
+  position : relative;
+  display  : inline-block;
+  width    : 100%;
+  height   : auto;
+}
+
+/* ============================================
+   ESTILOS BASE DEL TEXTO (comunes a ambas capas)
+   ============================================ */
+.banner__headline {
+  font-family    : 'Anton', Impact, 'Arial Black', sans-serif;
+  font-size      : clamp(3.8rem, 17vw, 14rem);
+  line-height    : 0.9;
+  text-transform : uppercase;
+  letter-spacing : -0.01em;
+  margin         : 0;
+  padding        : 0;
+}
+
+.banner__headline .line {
   display: block;
 }
 
-@keyframes imageFloat {
-  0%, 100% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+/* ============================================
+   CAPA 1: IMAGEN ESTÁTICA CENTRADA
+   ============================================ */
+.banner__headline--image {
+  position                : relative;
+  z-index                 : 1;
+  
+  /* Imagen centrada y estática */
+  background              : var(--banner-fill);
+  background-size         : cover;
+  background-position     : center center;
+  background-repeat       : no-repeat;
+  
+  /* Clip al texto */
+  -webkit-background-clip : text;
+          background-clip : text;
+  -webkit-text-fill-color : transparent;
+          color           : transparent;
 }
 
-.glow-effect {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  height: 60%;
-  background: radial-gradient(ellipse at center, var(--glow-color) 0%, transparent 70%);
-  filter: blur(80px);
-  opacity: 0.6;
-  z-index: 1;
-  animation: glowPulse 4s ease-in-out infinite;
+/* ============================================
+   CAPA 2: BRILLO ANIMADO
+   ============================================ */
+.banner__headline--shine {
+  position                : absolute;
+  top                     : 0;
+  left                    : 0;
+  width                   : 100%;
+  height                  : 100%;
+  z-index                 : 2;
+  
+  /* Gradiente lineal = el brillo */
+  background              : linear-gradient(
+                              110deg,
+                              transparent 20%,
+                              rgba(255, 255, 255, 0.8) 45%,
+                              rgba(255, 255, 255, 1) 50%,
+                              rgba(255, 255, 255, 0.8) 55%,
+                              transparent 80%
+                            );
+  background-size         : 200% 100%;
+  background-position     : -100% 0;
+  
+  /* Clip al texto */
+  -webkit-background-clip : text;
+          background-clip : text;
+  -webkit-text-fill-color : transparent;
+          color           : transparent;
+  
+  /* Mezcla para que solo brille donde hay texto */
+  mix-blend-mode          : screen;
+  
+  /* Animación del brillo */
+  animation               : shineMove var(--shine-duration) ease-in-out infinite;
 }
 
-@keyframes glowPulse {
-  0%, 100% { opacity: 0.6; }
-  50% { opacity: 0.8; }
+/* El brillo se mueve de izquierda a derecha */
+@keyframes shineMove {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
 }
 
-@media (max-width: 768px) {
-  .hero-text { font-size: clamp(3rem, 12vw, 6rem); }
+/* ============================================
+   SUBTÍTULO
+   ============================================ */
+.banner__sub {
+  display       : block;
+  margin-top    : 1.8rem;
+  font-family   : 'Courier New', monospace;
+  font-size     : clamp(0.55rem, 1.3vw, 0.85rem);
+  letter-spacing: 0.5em;
+  text-transform: uppercase;
+  color         : rgba(255, 255, 255, 0.22);
+}
+
+/* ============================================
+   TEXTURA SCANLINE (decorativa)
+   ============================================ */
+.banner::after {
+  content       : '';
+  position      : absolute;
+  inset         : 0;
+  z-index       : 5;
+  pointer-events: none;
+  background    : repeating-linear-gradient(
+                    to bottom,
+                    transparent 0px,
+                    transparent 3px,
+                    rgba(0, 0, 0, 0.05) 3px,
+                    rgba(0, 0, 0, 0.05) 4px
+                  );
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+  .banner__headline--shine,
+  .banner__glow,
+  .banner__content { animation: none; }
+  .banner__headline--shine { background-position: center; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 480px) {
+  .banner__headline {
+    letter-spacing: -0.02em;
+  }
 }
