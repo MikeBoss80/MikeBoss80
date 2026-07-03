@@ -162,32 +162,26 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 ## ⚙️ Stack tecnológico
 
 <div align="center">
+  
+### Dev stack
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,js,react,html,css,django,fastapi,cs,dotnet,docker,mysql" />
+</p>
 
-### 📊 Data & Analytics
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Pandas](https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/NumPy-013243?style=for-the-badge&logo=numpy&logoColor=white)
-![PowerBI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
-![Excel](https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white)
-![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
-![SQL](https://img.shields.io/badge/SQL-336791?style=for-the-badge&logo=postgresql&logoColor=white)
+### Data Analytics
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=python,mysql" />
+  <img src="https://cdn.simpleicons.org/numpy/f5f0e1" width="48" height="48" />
+  <img src="https://cdn.simpleicons.org/pandas/f5f0e1" width="48" height="48" />
+  <img src="https://cdn.simpleicons.org/jupyter" width="48" height="48" />
+  <img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/SVG/Power-BI.svg" width="48" height="48" />
+  <img src="https://img.icons8.com/color/96/microsoft-excel-2019.png" width="48" height="48" />
+</p>
 
-### 🚀 Backend & Fullstack
-![Django](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![CSharp](https://img.shields.io/badge/C%23_/_.NET-512BD4?style=for-the-badge&logo=dotnet&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
-![React](https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
-
-### 🛠️ Herramientas & Cloud
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
-![GCP](https://img.shields.io/badge/Google_Cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white)
-![VSCode](https://img.shields.io/badge/VS_Code-007ACC?style=for-the-badge&logo=visualstudiocode&logoColor=white)
+### Cloud & Tools
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=git,github,gcp,vscode,docker" />
+</p>
 
 </div>
 
@@ -270,9 +264,13 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 ![Autonomía](https://img.shields.io/badge/-Autonomía_y_Gestión-EC4899?style=for-the-badge&labelColor=000000)
 ![Resultados](https://img.shields.io/badge/-Orientación_a_Resultados-06B6D4?style=for-the-badge&labelColor=000000)
 
+## 🗣️ Idiomas & Soft Skills
+
+<div align="center">
+
+
+
 </div>
-
-
 <br>
 
 ## 🤝 Colaboración
