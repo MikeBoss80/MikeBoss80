@@ -251,20 +251,11 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 
 <div align="center">
 
-### 🌍 Idiomas
-
-![Español](https://img.shields.io/badge/Español-Nativo-2496ED?style=for-the-badge&labelColor=000000)
-![Inglés](https://img.shields.io/badge/Inglés-Avanzado-00D4FF?style=for-the-badge&labelColor=000000)
-
-### 💪 Soft Skills
-
-![Liderazgo](https://img.shields.io/badge/-Liderazgo_Técnico-2496ED?style=for-the-badge&labelColor=000000)
-![Equipo](https://img.shields.io/badge/-Trabajo_en_Equipo-00D4FF?style=for-the-badge&labelColor=000000)
-![Comunicación](https://img.shields.io/badge/-Comunicación_Efectiva-8B5CF6?style=for-the-badge&labelColor=000000)
-![Autonomía](https://img.shields.io/badge/-Autonomía_y_Gestión-EC4899?style=for-the-badge&labelColor=000000)
-![Resultados](https://img.shields.io/badge/-Orientación_a_Resultados-06B6D4?style=for-the-badge&labelColor=000000)
-
 ## 🗣️ Idiomas & Soft Skills
+
+<div align="center">
+  <img src="./assets/skills-language.svg" width="900" alt="Idiomas y Soft Skills"/>
+</div>
 
 <div align="center">
 
