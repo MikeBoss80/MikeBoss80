@@ -265,25 +265,20 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 <br>
 
 ## 🤝 Colaboración
-
-<div align="center">
-
-Interesado en proyectos relacionados con:
-
-- 🔧 Backend para sistemas empresariales
-- ⚙️ Automatización de procesos
-- 📊 BI y analítica aplicada a negocio
-- 🌐 Open source en herramientas de datos o backend
-- 💡 Productos digitales con impacto real
-
-</div>
-<br> 
 <div align="center">
   <img src="./foot.svg" width="100%" alt="footer"/>
 </div>
 
 <br>
+<div align="center">
+  <img src="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/main/assets/banner/banner.gif" 
+       alt="Let's Connect Banner" 
+       width="100%"/>
+</div>
 
+<!--
 <div align="center">
   <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6&height=125&section=footer&text=Let's%20Build%20Something%20Amazing&fontSize=28&fontColor=ffffff&animation=fadeIn&fontAlignY=38&desc=Powered%20by%20Code%20%26%20Coffee%20☕&descAlignY=60&descSize=16" />
 </div>
+-->
+
