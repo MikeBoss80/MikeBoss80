@@ -3,7 +3,7 @@
    Cambia SOLO esta variable para usar tu imagen
    ============================================ */
 :root {
-  --banner-image: url('imagen.jpg'); /* 👈 Tu imagen aquí */
+  --banner-image: url('docs/banner/banner.png'); /* 👈 Tu imagen aquí */
   --glow-color: rgba(36, 150, 237, 0.4);
   --bg-color: #000000;
 }
