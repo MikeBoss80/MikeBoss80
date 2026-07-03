@@ -1,0 +1,162 @@
+/* ============================================
+   🔧 CONFIGURACIÓN RÁPIDA
+   Cambia SOLO esta variable para usar tu imagen
+   ============================================ */
+:root {
+  --banner-image: url('imagen.jpg'); /* 👈 Tu imagen aquí */
+  --glow-color: rgba(36, 150, 237, 0.4);
+  --bg-color: #000000;
+}
+
+/* ============================================
+   RESET
+   ============================================ */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background-color: var(--bg-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-family: 'Anton', 'Bebas Neue', sans-serif;
+}
+
+/* ============================================
+   BANNER PRINCIPAL
+   ============================================ */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-color);
+}
+
+/* ============================================
+   TEXTO CON IMAGEN REVELADA
+   ============================================ */
+.text-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+}
+
+.hero-text {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 15vw, 12rem);
+  font-weight: 400;
+  line-height: 0.9;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  
+  /* ✨ Magia: imagen solo visible dentro del texto */
+  background-image: var(--banner-image);
+  background-size: 200% 200%;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+  /* Animación de la imagen flotando */
+  animation: 
+    imageFloat 20s ease-in-out infinite,
+    fadeInUp 1.2s ease-out;
+  
+  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.1));
+}
+
+.hero-text .line {
+  display: block;
+  position: relative;
+}
+
+/* ============================================
+   ANIMACIONES
+   ============================================ */
+@keyframes imageFloat {
+  0%, 100% { background-position: 0% 50%; }
+  25%      { background-position: 50% 0%; }
+  50%      { background-position: 100% 50%; }
+  75%      { background-position: 50% 100%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================
+   GLOW CINEMATOGRÁFICO
+   ============================================ */
+.glow-effect {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 60%;
+  background: radial-gradient(
+    ellipse at center,
+    var(--glow-color) 0%,
+    transparent 70%
+  );
+  filter: blur(80px);
+  opacity: 0.6;
+  z-index: 1;
+  animation: glowPulse 4s ease-in-out infinite;
+}
+
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; transform: translate(-50%, -50%) scale(1); }
+  50%      { opacity: 0.8; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+/* ============================================
+   BRILLO QUE RECORRE LAS LETRAS
+   ============================================ */
+.hero-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.15),
+    transparent
+  );
+  animation: shine 4s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shine {
+  0%   { left: -100%; }
+  50%, 100% { left: 100%; }
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .hero-text {
+    font-size: clamp(3rem, 12vw, 6rem);
+  }
+  .glow-effect {
+    width: 90%;
+    height: 50%;
+    filter: blur(60px);
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    font-size: clamp(2.5rem, 10vw, 4rem);
+  }
+}
