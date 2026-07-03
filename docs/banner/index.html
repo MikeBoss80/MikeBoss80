@@ -7,167 +7,30 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
-  <style>
-    /* ============================================
-       CONFIG
-       Para cambiar la imagen edita SOLO --banner-fill.
-       ============================================ */
-    :root {
-      --banner-fill      : url('banner.png');
-      --bg               : #000000;
-      --glow-a           : rgba(240, 147, 251, 0.3);
-      --glow-b           : rgba(79, 172, 254, 0.25);
-      --float-duration   : 8s;
-      --glow-duration    : 5s;
-    }
-
-    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-
-    html, body { width:100%; height:100%; }
-
-    body {
-      background  : var(--bg);
-      display     : flex;
-      align-items : center;
-      justify-content: center;
-      overflow    : hidden;
-      font-family : 'Anton', Impact, 'Arial Black', sans-serif;
-    }
-
-    /* ── BANNER ── */
-    .banner {
-      position        : relative;
-      width           : 100%;
-      height          : 100vh;
-      display         : flex;
-      align-items     : center;
-      justify-content : center;
-    }
-
-    /* ── GLOW AMBIENT ── */
-    .banner__glow {
-      position      : absolute;
-      inset         : 0;
-      z-index       : 1;
-      pointer-events: none;
-      background    : radial-gradient(ellipse 55% 40% at 30% 50%, var(--glow-a) 0%, transparent 70%),
-                      radial-gradient(ellipse 45% 35% at 70% 50%, var(--glow-b) 0%, transparent 70%);
-      filter        : blur(70px);
-      animation     : glowDrift var(--glow-duration) ease-in-out infinite alternate;
-    }
-
-    @keyframes glowDrift {
-      from {
-        background: radial-gradient(ellipse 55% 40% at 20% 50%, var(--glow-a) 0%, transparent 70%),
-                    radial-gradient(ellipse 45% 35% at 80% 50%, var(--glow-b) 0%, transparent 70%);
-      }
-      to {
-        background: radial-gradient(ellipse 55% 40% at 80% 50%, var(--glow-a) 0%, transparent 70%),
-                    radial-gradient(ellipse 45% 35% at 20% 50%, var(--glow-b) 0%, transparent 70%);
-      }
-    }
-
-    /* ── CONTENIDO ── */
-    .banner__content {
-      position        : relative;
-      z-index         : 10;
-      text-align      : center;
-      width           : 100%;
-      padding         : 0 4vw;
-      animation       : fadeIn 1s cubic-bezier(0.22, 1, 0.36, 1) both;
-    }
-
-    @keyframes fadeIn {
-      from { opacity:0; transform:translateY(16px); }
-      to   { opacity:1; transform:translateY(0); }
-    }
-
-    /* ── HEADLINE ──
-       background-size: 300% da espacio para que la
-       animación viaje sin gaps ni repeticiones.
-       ------------------------------------------ */
-    .banner__headline {
-      font-family             : 'Anton', Impact, 'Arial Black', sans-serif;
-      font-size               : clamp(3.8rem, 17vw, 14rem);
-      line-height             : 0.9;
-      text-transform          : uppercase;
-      letter-spacing          : -0.01em;
-
-      /* ── FILL: imagen o gradiente ── */
-      background              : var(--banner-fill);
-      background-size         : 300% 300%;
-
-      /* ── CLIP al texto ── */
-      -webkit-background-clip : text;
-              background-clip : text;
-      -webkit-text-fill-color : transparent;
-              color           : transparent;
-
-      /* ── Animación del fill ── */
-      animation               : fillFloat var(--float-duration) ease-in-out infinite;
-    }
-
-    .banner__headline .line { display:block; }
-
-    /* Viaje diagonal para que se note el movimiento */
-    @keyframes fillFloat {
-      0%   { background-position:   0%   0%; }
-      25%  { background-position: 100%  50%; }
-      50%  { background-position: 100% 100%; }
-      75%  { background-position:   0%  50%; }
-      100% { background-position:   0%   0%; }
-    }
-
-    /* ── SUBTÍTULO ── */
-    .banner__sub {
-      display        : block;
-      margin-top     : 1.8rem;
-      font-family    : 'Courier New', monospace;
-      font-size      : clamp(0.55rem, 1.3vw, 0.85rem);
-      letter-spacing : 0.5em;
-      text-transform : uppercase;
-      color          : rgba(255,255,255,0.22);
-    }
-
-    /* ── TEXTURA SCANLINE (decorativa) ── */
-    .banner::after {
-      content    : '';
-      position   : absolute;
-      inset      : 0;
-      z-index    : 5;
-      pointer-events: none;
-      background : repeating-linear-gradient(
-                     to bottom,
-                     transparent       0px,
-                     transparent       3px,
-                     rgba(0,0,0,0.05)  3px,
-                     rgba(0,0,0,0.05)  4px
-                   );
-    }
-
-    /* ── REDUCED MOTION ── */
-    @media (prefers-reduced-motion: reduce) {
-      .banner__headline,
-      .banner__glow,
-      .banner__content { animation:none; }
-      .banner__headline { background-position: center; }
-    }
-
-    /* ── RESPONSIVE ── */
-    @media (max-width: 480px) {
-      .banner__headline { letter-spacing: -0.02em; }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <section class="banner" role="banner">
     <div class="banner__glow" aria-hidden="true"></div>
     <div class="banner__content">
-      <h1 class="banner__headline" aria-label="Let's Connect!">
-        <span class="line">LET'S</span>
-        <span class="line">CONNECT!</span>
-      </h1>
+      
+      <!-- WRAPPER para las dos capas del texto -->
+      <div class="banner__headline-wrapper">
+        
+        <!-- CAPA 1: Imagen estática centrada -->
+        <h1 class="banner__headline banner__headline--image" aria-label="Let's Connect!">
+          <span class="line">LET'S</span>
+          <span class="line">CONNECT!</span>
+        </h1>
+        
+        <!-- CAPA 2: Brillo animado (se superpone) -->
+        <h1 class="banner__headline banner__headline--shine" aria-hidden="true">
+          <span class="line">LET'S</span>
+          <span class="line">CONNECT!</span>
+        </h1>
+        
+      </div>
+      
       <span class="banner__sub">Open to opportunities &nbsp;·&nbsp; Let's build something great</span>
     </div>
   </section>
