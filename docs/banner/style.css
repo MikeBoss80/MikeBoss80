@@ -3,34 +3,22 @@
    Cambia --banner-image para usar tu propia imagen
    ============================================ */
 :root {
-  --banner-image: url('docs/banner/banner.png'); /* 👈 CAMBIA AQUÍ TU IMAGEN */
-  --text-color: #ffffff;
+  --banner-image: url('docs/banner/banner.png');
   --glow-color: rgba(36, 150, 237, 0.4);
-  --bg-color: #000000;
 }
 
-/* ============================================
-   RESET Y CONFIGURACIÓN BASE
-   ============================================ */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-  background-color: var(--bg-color);
+  background: #000;
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  font-family: 'Anton', 'Bebas Neue', sans-serif;
+  font-family: 'Anton', sans-serif;
 }
 
-/* ============================================
-   BANNER PRINCIPAL
-   ============================================ */
 .banner {
   position: relative;
   width: 100%;
@@ -38,72 +26,40 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: var(--bg-color);
 }
 
-/* ============================================
-   CONTENEDOR DEL TEXTO
-   ============================================ */
 .text-container {
   position: relative;
   z-index: 10;
   text-align: center;
 }
 
-/* ============================================
-   TEXTO HERO CON EFECTO DE IMAGEN
-   ============================================ */
 .hero-text {
-  font-family: 'Anton', sans-serif;
-  font-size: clamp(4rem, 15vw, 12rem); /* Responsive: 4rem a 12rem */
-  font-weight: 400;
+  font-size: clamp(4rem, 15vw, 12rem);
   line-height: 0.9;
-  letter-spacing: -0.02em;
   text-transform: uppercase;
   
-  /* Efecto clave: imagen solo visible dentro del texto */
-  background-image: var(--banner-image);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  /* IMAGEN DE FONDO */
+  background: var(--banner-image) center/cover no-repeat;
+  
+  /* CLIP DEL TEXTO */
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
   
-  /* Animación de la imagen moviéndose dentro del texto */
+  /* ANIMACIÓN */
   animation: imageFloat 20s ease-in-out infinite;
-  
-  /* Sombra para dar profundidad */
-  filter: drop-shadow(0 0 30px rgba(255, 255, 255, 0.1));
 }
 
-/* Cada línea del texto */
 .hero-text .line {
   display: block;
-  position: relative;
 }
 
-/* ============================================
-   ANIMACIÓN: IMAGEN FLOTANDO DENTRO DEL TEXTO
-   ============================================ */
 @keyframes imageFloat {
-  0%, 100% {
-    background-position: 0% 50%;
-  }
-  25% {
-    background-position: 50% 0%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  75% {
-    background-position: 50% 100%;
-  }
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
-/* ============================================
-   EFECTO DE GLOW DETRÁS DEL TEXTO
-   ============================================ */
 .glow-effect {
   position: absolute;
   top: 50%;
@@ -111,11 +67,7 @@ body {
   transform: translate(-50%, -50%);
   width: 80%;
   height: 60%;
-  background: radial-gradient(
-    ellipse at center,
-    var(--glow-color) 0%,
-    transparent 70%
-  );
+  background: radial-gradient(ellipse at center, var(--glow-color) 0%, transparent 70%);
   filter: blur(80px);
   opacity: 0.6;
   z-index: 1;
@@ -123,125 +75,10 @@ body {
 }
 
 @keyframes glowPulse {
-  0%, 100% {
-    opacity: 0.6;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  50% {
-    opacity: 0.8;
-    transform: translate(-50%, -50%) scale(1.1);
-  }
+  0%, 100% { opacity: 0.6; }
+  50% { opacity: 0.8; }
 }
 
-/* ============================================
-   EFECTOS ADICIONALES (OPCIONALES)
-   Descomenta si quieres más efectos
-   ============================================ */
-
-/* Borde blanco alrededor de las letras */
-/*
-.hero-text {
-  -webkit-text-stroke: 2px rgba(255, 255, 255, 0.3);
-}
-*/
-
-/* Efecto holográfico con degradado */
-/*
-.hero-text {
-  background-image: 
-    linear-gradient(135deg, 
-      rgba(36, 150, 237, 0.3) 0%,
-      rgba(139, 92, 246, 0.3) 50%,
-      rgba(236, 72, 153, 0.3) 100%),
-    var(--banner-image);
-}
-*/
-
-/* Efecto de ruido (grain) */
-/*
-.banner::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-  opacity: 0.03;
-  pointer-events: none;
-  z-index: 100;
-}
-*/
-
-/* ============================================
-   RESPONSIVE DESIGN
-   ============================================ */
 @media (max-width: 768px) {
-  .hero-text {
-    font-size: clamp(3rem, 12vw, 6rem);
-    letter-spacing: -0.01em;
-  }
-  
-  .glow-effect {
-    width: 90%;
-    height: 50%;
-    filter: blur(60px);
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-  }
-}
-
-/* ============================================
-   ANIMACIÓN DE ENTRADA (OPCIONAL)
-   ============================================ */
-.hero-text {
-  animation: 
-    imageFloat 20s ease-in-out infinite,
-    fadeInUp 1s ease-out;
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* ============================================
-   EFECTO DE BRILLO QUE RECORRE LAS LETRAS
-   ============================================ */
-.hero-text::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.2),
-    transparent
-  );
-  animation: shine 3s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes shine {
-  0% {
-    left: -100%;
-  }
-  50%, 100% {
-    left: 100%;
-  }
-}
-@media (max-width: 480px) {
-  .hero-text {
-    font-size: clamp(2.5rem, 10vw, 4rem);
-  }
+  .hero-text { font-size: clamp(3rem, 12vw, 6rem); }
 }
