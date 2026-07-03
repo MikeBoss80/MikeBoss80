@@ -3,32 +3,259 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Let's Connect - Premium Banner</title>
-  <link rel="stylesheet" href="style.css">
-  
-  <!-- Google Fonts: Anton (Ultra Bold) -->
+  <title>Let's Connect – Banner</title>
+
+  <!-- ============================================
+       GOOGLE FONTS
+       Anton: ultra-condensed weight, ideal para text-clip
+       ============================================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+  <style>
+
+    /* ============================================
+       CONFIG TOKENS
+       Para cambiar la imagen, edita SOLO --banner-image.
+       El resto del banner se adapta automáticamente.
+       ============================================ */
+    :root {
+      --banner-image   : url('docs/banner/banner.png');
+      --bg             : #000000;
+      --glow-primary   : rgba(36, 150, 237, 0.35);
+      --glow-secondary : rgba(139, 92, 246, 0.25);
+      --font-display   : 'Anton', Impact, 'Arial Black', sans-serif;
+      --float-duration : 18s;
+      --glow-duration  : 5s;
+    }
+
+    /* ============================================
+       RESET
+       ============================================ */
+    *, *::before, *::after {
+      margin      : 0;
+      padding     : 0;
+      box-sizing  : border-box;
+    }
+
+    /* ============================================
+       BASE
+       ============================================ */
+    html, body {
+      width       : 100%;
+      height      : 100%;
+    }
+
+    body {
+      background  : var(--bg);
+      display     : flex;
+      align-items : center;
+      justify-content: center;
+      overflow    : hidden;
+      font-family : var(--font-display);
+    }
+
+    /* ============================================
+       BANNER WRAPPER
+       Full viewport, stacking context for glow + text
+       ============================================ */
+    .banner {
+      position        : relative;
+      width           : 100%;
+      height          : 100vh;
+      display         : flex;
+      align-items     : center;
+      justify-content : center;
+    }
+
+    /* ============================================
+       GLOW LAYER
+       Sits behind the text, animates between two
+       offset ellipses to create ambient light shift
+       ============================================ */
+    .banner__glow {
+      position         : absolute;
+      inset            : 0;
+      z-index          : 1;
+      pointer-events   : none;
+      /* Dual radial glows that drift apart on animation */
+      background       : radial-gradient(
+                           ellipse 60% 40% at 30% 50%,
+                           var(--glow-primary) 0%,
+                           transparent 70%
+                         ),
+                         radial-gradient(
+                           ellipse 50% 35% at 70% 50%,
+                           var(--glow-secondary) 0%,
+                           transparent 70%
+                         );
+      filter           : blur(60px);
+      animation        : glowDrift var(--glow-duration) ease-in-out infinite alternate;
+    }
+
+    @keyframes glowDrift {
+      0%   {
+        background: radial-gradient(ellipse 60% 40% at 25% 50%, var(--glow-primary)   0%, transparent 70%),
+                    radial-gradient(ellipse 50% 35% at 75% 50%, var(--glow-secondary) 0%, transparent 70%);
+        opacity: 0.7;
+      }
+      50%  {
+        opacity: 1;
+      }
+      100% {
+        background: radial-gradient(ellipse 60% 40% at 75% 50%, var(--glow-primary)   0%, transparent 70%),
+                    radial-gradient(ellipse 50% 35% at 25% 50%, var(--glow-secondary) 0%, transparent 70%);
+        opacity: 0.8;
+      }
+    }
+
+    /* ============================================
+       TEXT CONTAINER
+       Centres the headline, sits above the glow
+       ============================================ */
+    .banner__content {
+      position        : relative;
+      z-index         : 10;
+      text-align      : center;
+      width           : 100%;
+      padding         : 0 4vw;
+      /* Entrance fade */
+      animation       : fadeIn 1.2s cubic-bezier(0.22, 1, 0.36, 1) both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ============================================
+       HERO TEXT
+       Image visible only through the letter shapes.
+       background-size: 200% lets the float animation
+       travel across the full image without gaps.
+       ============================================ */
+    .banner__headline {
+      font-family              : var(--font-display);
+      font-size                : clamp(3.5rem, 16vw, 13rem);
+      line-height              : 0.92;
+      text-transform           : uppercase;
+      letter-spacing           : -0.01em;
+
+      /* Image fill */
+      background               : var(--banner-image) center / 200% auto no-repeat;
+      -webkit-background-clip  : text;
+              background-clip  : text;
+      -webkit-text-fill-color  : transparent;
+              color            : transparent;
+
+      /* Slow pan across the image */
+      animation                : imageFloat var(--float-duration) ease-in-out infinite;
+    }
+
+    /* Two-line variant: break at the exclamation mark */
+    .banner__headline .line {
+      display : block;
+    }
+
+    /* ============================================
+       IMAGE FLOAT ANIMATION
+       Pan left-to-right, then right-to-left — the
+       background-size: 200% gives enough room to
+       travel without repeating or leaving blank space
+       ============================================ */
+    @keyframes imageFloat {
+      0%   { background-position:  0%  40%; }
+      25%  { background-position: 60%  60%; }
+      50%  { background-position: 100% 40%; }
+      75%  { background-position: 40%  60%; }
+      100% { background-position:  0%  40%; }
+    }
+
+    /* ============================================
+       SUBTITLE (optional, purely decorative)
+       Thin white monospace line below the headline
+       ============================================ */
+    .banner__sub {
+      display         : block;
+      margin-top      : 1.6rem;
+      font-family     : 'Courier New', monospace;
+      font-size       : clamp(0.6rem, 1.4vw, 0.9rem);
+      letter-spacing  : 0.45em;
+      text-transform  : uppercase;
+      color           : rgba(255, 255, 255, 0.28);
+    }
+
+    /* ============================================
+       SCAN LINE (purely decorative texture)
+       A very subtle horizontal repeat that adds
+       depth without competing with the headline
+       ============================================ */
+    .banner::after {
+      content    : '';
+      position   : absolute;
+      inset      : 0;
+      z-index    : 5;
+      pointer-events: none;
+      background : repeating-linear-gradient(
+                     to bottom,
+                     transparent            0px,
+                     transparent            3px,
+                     rgba(0,0,0,0.06)       3px,
+                     rgba(0,0,0,0.06)       4px
+                   );
+    }
+
+    /* ============================================
+       REDUCED MOTION
+       Honour system preference — freeze animations
+       ============================================ */
+    @media (prefers-reduced-motion: reduce) {
+      .banner__headline,
+      .banner__glow,
+      .banner__content {
+        animation: none;
+      }
+      .banner__headline {
+        background-position: center;
+      }
+    }
+
+    /* ============================================
+       RESPONSIVE
+       ============================================ */
+    @media (max-width: 480px) {
+      .banner__headline {
+        letter-spacing: -0.02em;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
-  
+
   <!-- ============================================
-       PREMIUM BANNER SECTION
+       BANNER
        ============================================ -->
-  <section class="banner">
-    
-    <!-- Contenedor del texto con efecto de imagen -->
-    <div class="text-container">
-      <h1 class="hero-text">
+  <section class="banner" role="banner">
+
+    <!-- Ambient glow behind the text -->
+    <div class="banner__glow" aria-hidden="true"></div>
+
+    <!-- Main content -->
+    <div class="banner__content">
+
+      <h1 class="banner__headline" aria-label="Let's Connect!">
         <span class="line">LET'S</span>
-        <span class="line">CONNECT</span>
+        <span class="line">CONNECT!</span>
       </h1>
+
+      <!-- Optional tagline — delete if not needed -->
+      <span class="banner__sub">Open to opportunities &nbsp;·&nbsp; Let's build something great</span>
+
     </div>
-    
-    <!-- Efecto de glow detrás del texto -->
-    <div class="glow-effect"></div>
-    
+
   </section>
 
 </body>
