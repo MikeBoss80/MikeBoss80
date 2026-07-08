@@ -28,7 +28,7 @@
 
 <div align="center">
   <img src="https://img.shields.io/badge/🎯_FOCUS-Backend_&_Data-2496ED?style=for-the-badge&labelColor=000000" />
-  <img src="https://img.shields.io/badge/🚀_EXPERIENCE-3+_Years-00D4FF?style=for-the-badge&labelColor=000000" />
+  <img src="https://img.shields.io/badge/🚀_EXPERIENCE-2+_Years-00D4FF?style=for-the-badge&labelColor=000000" />
   <img src="https://img.shields.io/badge/💡_APPROACH-Data_Driven-8B5CF6?style=for-the-badge&labelColor=000000" />
 </div>
 
@@ -50,7 +50,7 @@ Orientado a soluciones mantenibles, con dominio de **Git**, metodologías ágile
 ## 💼 Experiencia
 
 <div align="center">
-  <img src="https://img.shields.io/badge/📊_TOTAL_EXPERIENCE-3+_Years-2496ED?style=for-the-badge&labelColor=000000" />
+  <img src="https://img.shields.io/badge/📊_TOTAL_EXPERIENCE-2+_Years-2496ED?style=for-the-badge&labelColor=000000" />
   <img src="https://img.shields.io/badge/🏢_COMPANIES-3-00D4FF?style=for-the-badge&labelColor=000000" />
   <img src="https://img.shields.io/badge/🚀_PROJECTS-10+-8B5CF6?style=for-the-badge&labelColor=000000" />
 </div>
