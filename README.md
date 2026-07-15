@@ -264,7 +264,6 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 </div>
 <br>
 
-## 🤝 Colaboración
 <div align="center">
   <img src="./foot.svg" width="100%" alt="footer"/>
 </div>
