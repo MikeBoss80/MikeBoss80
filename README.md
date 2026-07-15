@@ -264,15 +264,15 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 </div>
 <br>
 
-<div align="center">
-  <img src="./foot.svg" width="100%" alt="footer"/>
-</div>
-
 <br>
 <div align="center">
   <img src="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/main/assets/banner/banner.gif" 
        alt="Let's Connect Banner" 
        width="100%"/>
+</div>
+
+<div align="center">
+  <img src="./foot.svg" width="100%" alt="footer"/>
 </div>
 
 <!--
