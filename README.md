@@ -190,15 +190,30 @@ Diseño e implementación de un ERP modular para barberías y PYMEs, desde la ar
 ## 📊 GitHub Stats
 
 <div align="center">
+
 <img
   src="https://github-readme-streak-stats.herokuapp.com?user=MikeBoss80&theme=radical&hide_border=true&background=0d1117&stroke=00D4FF&ring=2496ED&fire=00D4FF&currStreakLabel=2496ED"
   alt="GitHub Streak Stats"
   width="70%" />
 
+<br><br>
+
 <img
   src="https://github-readme-activity-graph.vercel.app/graph?username=MikeBoss80&theme=react&hide_border=true&bg_color=0d1117&color=2496ED&line=00D4FF&point=ffffff&area=true&area_color=2496ED"
   alt="GitHub Activity Graph"
   width="90%" />
+
+<br><br>
+
+<picture>
+  <source
+    media="(prefers-color-scheme: dark)"
+    srcset="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/output/github-contribution-grid-snake-dark.svg">
+  <img
+    alt="GitHub contribution snake animation"
+    src="https://raw.githubusercontent.com/MikeBoss80/MikeBoss80/output/github-contribution-grid-snake.svg">
+</picture>
+
 </div>
 
 <br>
